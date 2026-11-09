@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 const classPillClassName =
@@ -11,14 +12,22 @@ const classPillClassName =
  */
 export function DigitalDrivingEraWelcomeHero({
   headingLevel = "h1",
+  ariaLabel = "Kỷ nguyên AI trong đào tạo lái xe",
+  className,
+  children,
 }: {
   headingLevel?: "h1" | "h2";
+  ariaLabel?: string;
+  /** Trang chủ: slide 1 của slider (`role="group"` do slider gắn). */
+  className?: string;
+  /** Nội dung thêm dưới chữ (trang chủ: card "Hệ thống HPO"). */
+  children?: ReactNode;
 }) {
   const Heading = headingLevel;
   return (
     <section
-      aria-label="Kỷ nguyên AI trong đào tạo lái xe"
-      className="relative bg-white"
+      aria-label={ariaLabel}
+      className={cn("relative bg-white", className)}
     >
       <div className="mx-auto max-w-[1480px] px-3 pt-11 pb-[34px] text-center sm:px-[4vw] sm:pt-[45px] sm:pb-[42px] xl:pt-10">
         <p
@@ -49,6 +58,7 @@ export function DigitalDrivingEraWelcomeHero({
           khí (số sàn) và số tự động (xe ô tô điện,...)) và{" "}
           <strong className={classPillClassName}>Hạng C1</strong>.
         </p>
+        {children}
       </div>
     </section>
   );

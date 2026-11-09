@@ -336,3 +336,20 @@
     }
   }
 }
+
+/* Thanh tiến độ chấm đang chọn của slider đầu trang chủ (V2 `.company-slider.is-autoplaying`). */
+@keyframes hpo-slide-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* Dải "Báo chí đưa tin" trang chủ chạy ngang (2 nhóm giống nhau → dịch -50% là liền mạch). */
+@keyframes press-strip-marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}

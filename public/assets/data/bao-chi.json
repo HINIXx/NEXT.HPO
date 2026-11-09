@@ -1,0 +1,189 @@
+{
+  "_huongDan": [
+    "Danh sách bài 'Báo chí đưa tin' trên trang chủ. Dải chạy ngang + bảng 'Xem tất cả' + bộ lọc đều dựng từ file này.",
+    "Thêm bài: chép 1 khối { ... } trong 'bai', sửa nội dung, các khối cách nhau dấu phẩy (khối cuối không có dấu phẩy).",
+    "bao = tên báo hiện trên thẻ; tieuDe = tiêu đề bài; link = đường dẫn đầy đủ; ngay = ngày giờ đăng dạng NĂM-THÁNG-NGÀYTGIỜ:PHÚT (giờ Việt Nam).",
+    "kenh = một trong các mã ở mục 'kenh' bên dưới (bao-dien-tu, truyen-hinh, phat-thanh, mang-xa-hoi). Thêm kênh mới: thêm 1 dòng vào 'kenh'.",
+    "Thứ tự trong 'bai' = thứ tự trên dải chạy. Bảng 'Xem tất cả' tự xếp theo ngày / tên báo. 3 bài có 'ngay' mới nhất tự gắn nhãn 'Mới'.",
+    "ghiChu (không bắt buộc) chỉ để người sửa đọc, web không hiển thị.",
+    "anh (không bắt buộc) = ảnh đại diện của bài, để trong assets/images/bao-chi/ (nên 960×540, dạng .webp). Bài có 'anh' mới được đưa lên khu 'Báo chí nói về Hiệp Phát' (thẻ lớn + 2 thẻ nhỏ tự đổi); bài mới nhất hiện trước.",
+    "Sửa xong chỉ cần lưu file và đưa lên web: file này luôn được tải mới, không phải đổi ?v= ở đâu cả."
+  ],
+  "kenh": {
+    "bao-dien-tu": "Báo điện tử",
+    "truyen-hinh": "Truyền hình",
+    "phat-thanh": "Phát thanh",
+    "mang-xa-hoi": "Mạng xã hội"
+  },
+  "bai": [
+    {
+      "bao": "Tuổi Trẻ",
+      "kenh": "bao-dien-tu",
+      "tieuDe": "Học lái xe ô tô mọi lúc, mọi nơi nhờ nền tảng số tích hợp AI",
+      "link": "https://tuoitre.vn/hoc-lai-xe-o-to-moi-luc-moi-noi-nho-nen-tang-so-tich-hop-ai-100261028160205011.htm",
+      "anh": "assets/images/bao-chi/tuoi-tre-2026-10-28.webp",
+      "ngay": "2026-10-28T16:34"
+    },
+    {
+      "bao": "Thanh Niên",
+      "kenh": "bao-dien-tu",
+      "tieuDe": "Học lái ô tô: Chạy thử sa hình, đường trường ảo trước khi lên xe thật",
+      "link": "https://thanhnien.vn/hoc-lai-o-to-chay-thu-sa-hinh-duong-truong-ao-truoc-khi-len-xe-that-185261028170253296.htm",
+      "anh": "assets/images/bao-chi/thanh-nien-2026-10-28.webp",
+      "ngay": "2026-10-28T18:34"
+    },
+    {
+      "bao": "Sài Gòn Giải Phóng",
+      "kenh": "bao-dien-tu",
+      "tieuDe": "Học lái ô tô từ xa qua hệ sinh thái chuyển đổi số tích hợp AI",
+      "link": "https://www.sggp.org.vn/hoc-lai-o-to-tu-xa-qua-he-sinh-thai-chuyen-doi-so-tich-hop-ai-post878862.html",
+      "anh": "assets/images/bao-chi/sai-gon-giai-phong-2026-10-28.webp",
+      "ngay": "2026-10-28T15:19"
+    },
+    {
+      "bao": "HTV",
+      "kenh": "truyen-hinh",
+      "tieuDe": "Lần đầu tiên, quy trình đào tạo lái xe được ứng dụng AI tại Việt Nam",
+      "link": "https://htv.vn/mo-hinh-hoc-lai-xe-moi-hoc-lai-xe-o-to-moi-luc-moi-noi-nho-nen-tang-so-tich-hop-ai-22226102820330211.htm",
+      "anh": "assets/images/bao-chi/htv-2026-10-28.webp",
+      "ngay": "2026-10-28T20:51"
+    },
+    {
+      "bao": "VOV",
+      "kenh": "bao-dien-tu",
+      "tieuDe": "TP.HCM ứng dụng AI giúp học viên lái xe hoàn thành khóa học đúng hạn",
+      "link": "https://vov.vn/xa-hoi/tphcm-ung-dung-ai-giup-hoc-vien-lai-xe-hoan-thanh-khoa-hoc-dung-han-post1345317.vov",
+      "ngay": "2026-10-28T23:44"
+    },
+    {
+      "bao": "VOH",
+      "kenh": "bao-dien-tu",
+      "tieuDe": "Mô hình học lái xe mới: Học lái xe ô tô mọi lúc, mọi nơi nhờ nền tảng số tích hợp A.I.",
+      "link": "https://voh.com.vn/xa-hoi/mo-hinh-hoc-lai-xe-moi-hoc-lai-xe-o-to-moi-luc-moi-noi-nho-nen-tang-so-tich-hop-a-i-676291.html",
+      "ngay": "2026-10-28T22:30"
+    },
+    {
+      "bao": "Công an TP.HCM",
+      "kenh": "bao-dien-tu",
+      "tieuDe": "Chuyển đổi số toàn diện và ứng dụng AI trong đào tạo, sát hạch lái xe",
+      "link": "https://congan.com.vn/giao-thong-24h/chuyen-doi-so-toan-dien-va-ung-dung-ai-trong-dao-tao-sat-hach-lai-xe_199292.html",
+      "anh": "assets/images/bao-chi/cong-an-tp-hcm-2026-10-28.webp",
+      "ngay": "2026-10-28T15:04"
+    },
+    {
+      "bao": "Pháp Luật Việt Nam",
+      "kenh": "truyen-hinh",
+      "tieuDe": "TP.HCM: Ứng dụng AI trong đào tạo lái xe ô tô trên nền tảng số",
+      "link": "https://videophapluat.baophapluat.vn/tieu-diem/tphcm-ung-dung-ai-trong-dao-tao-lai-xe-o-to-tren-nen-tang-so-196279.html",
+      "anh": "assets/images/bao-chi/phap-luat-viet-nam-2026-10-28.webp",
+      "ngay": "2026-10-28T13:52"
+    },
+    {
+      "bao": "Báo Tin Tức",
+      "kenh": "bao-dien-tu",
+      "tieuDe": "Ứng dụng AI hỗ trợ đào tạo và quản lý học viên lái xe",
+      "link": "https://baotintuc.vn/ung-dung-ai-ho-tro-dao-tao-va-quan-ly-hoc-vien-lai-xe-post1398019.html",
+      "ngay": "2026-10-28T15:34"
+    },
+    {
+      "bao": "Dân Việt",
+      "kenh": "bao-dien-tu",
+      "tieuDe": "Đào tạo lái xe trên nền tảng số: Học viên ngồi nhà đăng ký và học lý thuyết mọi lúc, mọi nơi",
+      "link": "https://danviet.vn/dao-tao-lai-xe-tren-nen-tang-so-hoc-vien-ngoi-nha-dang-ky-va-hoc-ly-thuyet-moi-luc-moi-noi-d1470631.html",
+      "anh": "assets/images/bao-chi/dan-viet-2026-10-28.webp",
+      "ngay": "2026-10-28T14:21"
+    },
+    {
+      "bao": "VOV Giao thông",
+      "kenh": "phat-thanh",
+      "tieuDe": "Đào tạo lái xe thời AI, xóa khoảng cách không gian, thời gian",
+      "link": "https://vovgiaothong.vn/newsaudio/dao-tao-lai-xe-thoi-ai-xoa-khoang-cach-khong-gian-thoi-gian-d56394.html",
+      "anh": "assets/images/bao-chi/vov-giao-thong-2026-10-29.webp",
+      "ngay": "2026-10-29T12:50"
+    },
+    {
+      "bao": "VOV1",
+      "kenh": "phat-thanh",
+      "tieuDe": "TP.HCM ứng dụng AI giúp học viên lái xe hoàn thành khóa học đúng hạn",
+      "link": "https://vov1.vov.vn/khoa-hoc-cong-nghe/tin-khoa-hoc-cong-nghe/tphcm-ung-dung-ai-giup-hoc-vien-lai-xe-hoan-thanh-khoa-hoc-dung-han-137899.vov",
+      "anh": "assets/images/bao-chi/vov1-2026-10-28.webp",
+      "ngay": "2026-10-28T18:32"
+    },
+    {
+      "bao": "Tạp chí Xây dựng",
+      "kenh": "bao-dien-tu",
+      "tieuDe": "TP.HCM đẩy mạnh chuyển đổi số, ứng dụng AI trong đào tạo lái xe ô tô",
+      "link": "https://giaothong.tapchixaydung.vn/tphcm-day-manh-chuyen-doi-so-ung-dung-ai-trong-dao-tao-lai-xe-o-to-183290000000002483.htm",
+      "anh": "assets/images/bao-chi/tap-chi-xay-dung-2026-10-28.webp",
+      "ngay": "2026-10-28T15:19"
+    },
+    {
+      "bao": "Văn hóa và Đời sống",
+      "kenh": "bao-dien-tu",
+      "tieuDe": "TP.HCM ứng dụng AI giúp học viên lái xe hoàn thành khóa học đúng hạn",
+      "link": "https://vanhoavadoisong.vn/tphcm-ung-dung-ai-giup-hoc-vien-lai-xe-hoan-thanh-khoa-hoc-dung-han-a29691.html",
+      "anh": "assets/images/bao-chi/van-hoa-va-doi-song-2026-10-28.webp",
+      "ngay": "2026-10-28T15:28"
+    },
+    {
+      "bao": "Tin Tức Online",
+      "kenh": "bao-dien-tu",
+      "tieuDe": "Ứng dụng AI trong đào tạo lái xe, hơn 85% học viên hoàn thành khóa học đúng hạn",
+      "link": "https://tintuconline.com.vn/ung-dung-ai-trong-dao-tao-lai-xe-hon-85-hoc-vien-hoan-thanh-khoa-hoc-dung-han-5136131.html",
+      "anh": "assets/images/bao-chi/tin-tuc-online-2026-10-28.webp",
+      "ngay": "2026-10-28T16:30"
+    },
+    {
+      "bao": "HTV Facebook",
+      "kenh": "mang-xa-hoi",
+      "tieuDe": "Mô hình học lái xe mới: Học lái xe ô tô mọi lúc, mọi nơi nhờ nền tảng số tích hợp AI",
+      "link": "https://www.facebook.com/share/p/19zUrcefZ6/",
+      "ngay": "2026-10-28T10:40",
+      "ghiChu": "LINK SAI: đang mở bài của CafeTek — cần link đúng bài HTV trên Facebook"
+    },
+    {
+      "bao": "CafeTek",
+      "kenh": "mang-xa-hoi",
+      "tieuDe": "Kỷ nguyên AI trong đào tạo lái xe: Học lái ô tô bây giờ có gì khác biệt?",
+      "link": "https://www.facebook.com/CafeTek.vn/posts/pfbid0vMM44LD8z3nu65poBtFinT73YbUmrB4HbH1kJR9fSYT4ggvsAd1J1uYeLiRhq3LZl",
+      "ngay": "2026-10-28T10:40"
+    },
+    {
+      "bao": "Made By VietNam",
+      "kenh": "mang-xa-hoi",
+      "tieuDe": "Doanh nghiệp Việt ứng dụng AI giúp học lái xe trực quan, sinh động",
+      "link": "https://www.facebook.com/reel/1417602930487450",
+      "ngay": "2026-10-28T18:55"
+    },
+    {
+      "bao": "Made By VietNam - TikTok",
+      "kenh": "mang-xa-hoi",
+      "tieuDe": "Doanh nghiệp Việt ứng dụng AI giúp học lái xe trực quan, sinh động",
+      "link": "https://www.tiktok.com/@madebyvietnam/video/7701687439437483265",
+      "ngay": "2026-10-28T19:00"
+    },
+    {
+      "bao": "CafeTek - TikTok",
+      "kenh": "mang-xa-hoi",
+      "tieuDe": "Kỷ nguyên AI trong đào tạo lái xe: Học lái ô tô bây giờ có gì khác biệt?",
+      "link": "https://www.tiktok.com/@cafetek/video/7702370894269713672",
+      "ngay": "2026-10-30T15:12"
+    },
+    {
+      "bao": "Made By VietNam - HTV",
+      "kenh": "truyen-hinh",
+      "tieuDe": "Chương trình Made By VietNam về mô hình học lái xe mới",
+      "link": "https://youtu.be/vLiie4Ubbb0?si=tlHEtbTZL5mf0JYt",
+      "anh": "assets/images/bao-chi/made-by-vietnam-htv-2026-10-30.webp",
+      "ngay": "2026-10-30T18:38"
+    },
+    {
+      "bao": "CafeTek - HTV",
+      "kenh": "truyen-hinh",
+      "tieuDe": "Chương trình CafeTek về mô hình học lái xe mới",
+      "link": "https://youtu.be/hOKTWu45sAA?si=AVCufs7c7sxlI-CR",
+      "anh": "assets/images/bao-chi/cafetek-htv-2026-11-01.webp",
+      "ngay": "2026-11-01T19:00"
+    }
+  ]
+}
