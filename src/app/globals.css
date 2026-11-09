@@ -1,0 +1,255 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* ==========================================================================
+   Token thiết kế Hiệp Phát — lấy từ V2 (assets/css/foundation.css + các file
+   site-header-*, site-footer-*, site-floating-actions-dock.css) @ commit 0709939.
+   Quy tắc dùng màu (Design System, Giám đốc duyệt):
+   - Xanh logo #2b26fb, đỏ #ea1e24, navy #2d3489.
+   - Vàng #faec1a CHỈ trên nền tối. Chữ nhấn: nền sáng → đỏ, nền tối → vàng #facc15.
+   - Cam #ff6b35 CHỈ trang trí, không làm màu chữ.
+   ========================================================================== */
+@theme {
+  /* ---- Breakpoint (min-width, px giống media query V2) ----
+     V2 viết max-width: 600 / 720 / 900 / 1100 / 1280 → ở đây là min-width +1px.
+     Ngưỡng riêng của header (1351, 1401, 1481, 1600, 1641, 1661, 1721) dùng giá trị tùy ý: min-[1351px]:… */
+  --breakpoint-*: initial;
+  --breakpoint-sm: 601px;
+  --breakpoint-md: 721px;
+  --breakpoint-lg: 901px;
+  --breakpoint-xl: 1101px;
+  --breakpoint-2xl: 1281px;
+
+  /* ---- Màu thương hiệu (Design System) ---- */
+  --color-brand-blue: #2b26fb;
+  --color-brand-red: #ea1e24;
+  --color-brand-red-deep: #d61a20; /* nút "Đăng ký học" thanh dưới đáy (5.2:1 với chữ trắng) */
+  --color-brand-navy: #2d3489;
+  --color-brand-yellow: #faec1a; /* chỉ trên nền tối */
+  --color-emphasis-yellow: #facc15; /* chữ nhấn trên nền tối */
+  --color-emphasis-red: #dc2626; /* chữ nhấn trên nền sáng (V2 --em-red) */
+  --color-decor-orange: #ff6b35; /* chỉ trang trí */
+  --color-decor-orange-soft: #ffefe6;
+
+  /* ---- Màu giao diện V2 (foundation.css) ---- */
+  --color-ink: #0a1330; /* chữ chính + nền thanh trên/footer */
+  --color-line: #e6ebf5;
+  --color-line-strong: #cfd7e8;
+  --color-surface: #f5f7fc;
+  --color-surface-2: #edf1fa;
+  --color-primary: #1e40af; /* V2 --blue-600 */
+  --color-primary-hover: #1e3a8a; /* V2 --blue-700 */
+  --color-primary-50: #eff6ff;
+  --color-primary-100: #dbeafe;
+  --color-primary-200: #bfdbfe;
+  --color-primary-500: #3b82f6;
+  --color-primary-900: #172554;
+
+  /* ---- Màu header (site-header-nav-refresh.css) ---- */
+  --color-header-navy: #13235a;
+  --color-header-ink: #1d2742;
+  --color-header-blue: #2643e9;
+  --color-header-blue-deep: #1b2fa8;
+  --color-header-blue-bright: #3355ff;
+  --color-header-track: #f3f6fc;
+  --color-header-track-line: #e4eaf5;
+  --color-header-tint: #eef2ff;
+  --color-header-tint-line: #dfe6ff;
+  --color-header-indigo-200: #c7d2fe;
+  --color-header-muted: #7a849c;
+
+  /* ---- Font (biến do next/font/local gắn trên <html>) ---- */
+  --font-display: var(--font-be-vietnam-pro), system-ui, sans-serif;
+  --font-sans:
+    var(--font-svn-gilroy), var(--font-be-vietnam-pro), system-ui, sans-serif;
+
+  /* ---- Cỡ chữ (quy tắc "to, rõ": nội dung ≥17px, chữ phụ ≥14px) ---- */
+  --text-body: 17px;
+  --text-body--line-height: 1.6;
+  --text-meta: 14px;
+  --text-meta--line-height: 1.5;
+  --text-lead: clamp(17px, 1.3vw, 20px);
+  --text-lead--line-height: 1.7;
+  --text-eyebrow: 25px;
+
+  /* ---- Bo góc ---- */
+  --radius-control: 10px; /* nút ☰, nút đóng menu */
+  --radius-card: 18px; /* thẻ, danh sách xổ xuống */
+
+  /* ---- Đổ bóng ---- */
+  --shadow-hp-sm:
+    0 1px 2px rgba(10, 19, 48, 0.04), 0 1px 1px rgba(10, 19, 48, 0.03);
+  --shadow-hp-md:
+    0 8px 24px -8px rgba(10, 19, 48, 0.1), 0 2px 6px rgba(10, 19, 48, 0.04);
+  --shadow-hp-lg:
+    0 24px 60px -20px rgba(10, 19, 48, 0.18),
+    0 8px 20px -10px rgba(10, 19, 48, 0.06);
+  --shadow-hp-blue: 0 18px 44px -12px rgba(30, 64, 175, 0.32);
+
+  /* ---- Chuyển động ---- */
+  --ease-hp: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-hp-soft: cubic-bezier(0.4, 0, 0.2, 1);
+
+  --animate-phone-ring: phone-ring 2.6s ease-out infinite;
+  --animate-float-ring: float-ring 2.4s ease-in-out infinite;
+
+  @keyframes phone-ring {
+    from {
+      transform: scale(0.85);
+      opacity: 1;
+    }
+    to {
+      transform: scale(1.25);
+      opacity: 0;
+    }
+  }
+  @keyframes float-ring {
+    0%,
+    100% {
+      transform: scale(1);
+      opacity: 0.4;
+    }
+    50% {
+      transform: scale(1.18);
+      opacity: 0;
+    }
+  }
+}
+
+/* Biến cho primitive shadcn (src/components/ui/*). `accent` của shadcn là nền hover nhạt — KHÔNG phải cam. */
+:root {
+  --background: #ffffff;
+  --foreground: #0a1330;
+  --primary-foreground: #ffffff;
+  --border: #e6ebf5;
+  --input: #e6ebf5;
+  --ring: #1e40af;
+  --card: #ffffff;
+  --card-foreground: #0a1330;
+  --popover: #ffffff;
+  --popover-foreground: #0a1330;
+  --secondary: #f5f7fc;
+  --secondary-foreground: #0a1330;
+  --muted: #f5f7fc;
+  --muted-foreground: #0a1330;
+  --accent: #f5f7fc;
+  --accent-foreground: #0a1330;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+}
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+}
+
+@layer base {
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply text-ink bg-white font-sans;
+    line-height: 1.55;
+    overflow-x: clip;
+  }
+  img,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+  ::selection {
+    background: var(--color-primary);
+    color: #fff;
+  }
+  :focus-visible {
+    outline: 3px solid var(--color-header-blue);
+    outline-offset: 2px;
+  }
+
+  /* Chữ nhấn trong tiêu đề: chỉ đổi màu, chữ đứng (V2 site-heading-emphasis-upright.css). */
+  :is(h1, h2, h3, h4) em {
+    font-style: normal;
+  }
+
+  /* Điểm neo chừa đúng chiều cao header dính (V2 site-header-large-logo.css). */
+  #main-content,
+  #lien-he {
+    scroll-margin-top: 73px;
+    @variant sm {
+      scroll-margin-top: 99px;
+    }
+    @variant md {
+      scroll-margin-top: 135px;
+    }
+    @variant 2xl {
+      scroll-margin-top: 137px;
+    }
+  }
+
+  /* Thanh cuộn trang theo màu logo (V2 site-scrollbar-brand-blue.css). */
+  html::-webkit-scrollbar {
+    width: 12px;
+  }
+  html::-webkit-scrollbar-track {
+    background: #eef1f8;
+  }
+  html::-webkit-scrollbar-thumb {
+    min-height: 48px;
+    border: 3px solid #eef1f8;
+    border-radius: 999px;
+    background: var(--color-brand-blue);
+  }
+  html::-webkit-scrollbar-thumb:hover,
+  html::-webkit-scrollbar-thumb:active {
+    background: var(--color-primary-hover);
+  }
+  @supports not selector(::-webkit-scrollbar) {
+    html {
+      scrollbar-color: var(--color-brand-blue) #eef1f8;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* Khung nội dung chung (V2 .container): rộng tối đa clamp(1240px, 88vw, 1680px), lề 28 / 22 / 20px. */
+@utility container-site {
+  width: 100%;
+  max-width: clamp(1240px, 88vw, 1680px);
+  margin-inline: auto;
+  padding-inline: 20px;
+  @variant md {
+    padding-inline: 22px;
+  }
+  @variant lg {
+    padding-inline: 28px;
+  }
+}
