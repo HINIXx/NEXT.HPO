@@ -15,7 +15,18 @@ export const courseSectionContainerClassName =
  * TT GDNN, Ưu đãi): nền trời-mây-thành phố · tiêu đề DS · hộp quà "HỌC PHÍ TRỌN GÓI" · 3 thẻ · hạn ưu đãi.
  * Bố cục: ≥1024px hộp quà trái + thẻ phải; <1024px hộp quà lên trên (nằm ngang); <768px thẻ xếp dọc.
  */
-export function CoursesTuitionShowcaseSection() {
+export function CoursesTuitionShowcaseSection({
+  tuitionByCourseId,
+}: {
+  /** Giá riêng theo mã thẻ (trang Ưu đãi: `promotionTuitionByCourseId`); trống = giá chuẩn. */
+  tuitionByCourseId?: Readonly<Record<string, string>>;
+} = {}) {
+  const courses = tuitionByCourseId
+    ? courseTuitionOfferings.map((course) => ({
+        ...course,
+        tuition: tuitionByCourseId[course.id] ?? course.tuition,
+      }))
+    : courseTuitionOfferings;
   return (
     <section
       id="khoa-hoc"
@@ -52,7 +63,7 @@ export function CoursesTuitionShowcaseSection() {
 
         <div className="grid gap-[clamp(20px,2.6vw,36px)] min-[1024px]:grid-cols-[clamp(196px,19vw,250px)_minmax(0,1fr)] min-[1024px]:items-center">
           <CourseTuitionGiftPromo />
-          <CourseTuitionCardsInteractiveList courses={courseTuitionOfferings} />
+          <CourseTuitionCardsInteractiveList courses={courses} />
           <CourseTuitionPromoDeadlineNote />
         </div>
       </div>

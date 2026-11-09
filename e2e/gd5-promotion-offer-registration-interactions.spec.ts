@@ -17,8 +17,12 @@ test("HTML xuất sẵn có đủ chữ (không cần JS)", async ({ request }) 
     "KHÓA HỌC CỦA CHÚNG TÔI",
     "CHƯƠNG TRÌNH ĐÀO TẠO",
     "825 km · 24 giờ",
+    "15.000.000đ",
+    "17.000.000đ",
   ])
     expect(html).toContain(text);
+  // Trang Ưu đãi dùng giá riêng, không phải giá chuẩn 16/18 triệu.
+  expect(html).not.toContain("16.000.000đ");
 });
 
 test("Form: báo lỗi từng ô, focus ô lỗi đầu, sửa xong ẩn lỗi", async ({
