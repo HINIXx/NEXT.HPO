@@ -300,3 +300,39 @@
   filter: drop-shadow(0 8px 18px rgba(43, 38, 251, 0.14));
   animation: var(--animate-title-sheen);
 }
+
+/* Hiện dần khi cuộn tới (V2 foundation.css `[data-reveal]` + `.is-visible`).
+   Chỉ ẩn khi island ScrollRevealActivator đã chạy (gắn `data-reveal-ready` lên <html>) → không có JS vẫn thấy nội dung.
+   Trễ: `data-reveal-delay="1|2"` = 0,08s / 0,16s. */
+@layer base {
+  [data-reveal] {
+    transition:
+      opacity 0.85s var(--ease-hp),
+      transform 0.85s var(--ease-hp);
+  }
+  [data-reveal-delay="1"] {
+    transition-delay: 0.08s;
+  }
+  [data-reveal-delay="2"] {
+    transition-delay: 0.16s;
+  }
+  :root[data-reveal-ready] [data-reveal]:not([data-revealed]) {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+}
+
+/* Vệt sáng lướt qua nút "Đăng ký tư vấn ngay" (V2 consultShine 2.8s). Dùng: before:animate-consult-shine. */
+@theme {
+  --animate-consult-shine: consult-shine 2.8s ease-in-out infinite;
+  @keyframes consult-shine {
+    0%,
+    30% {
+      left: -45%;
+    }
+    65%,
+    100% {
+      left: 125%;
+    }
+  }
+}

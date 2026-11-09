@@ -15,6 +15,8 @@ const eslintConfig = defineConfig([
   globalIgnores([
     ".yarn/**",
     "public/**",
+    // Ghi chú + script chụp ảnh nội bộ (gitignore), không phải mã nguồn site.
+    "plans/**",
     // Default ignores of eslint-config-next:
     ".next/**",
     "out/**",
