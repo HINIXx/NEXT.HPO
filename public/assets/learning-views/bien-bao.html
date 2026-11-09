@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Biển báo hiệu | Hiệp Phát</title>
+<!-- Sinh tự động từ WEB-HPO-V2 @0709939 (assets/data/bien-bao-view.html + CSS V2 đã lọc).
+     Script: NEXT.HPO/plans/reports/screenshots-gd4/generate-standalone-learning-view-documents.cjs — sửa nội dung thì sửa file này. -->
+<style>
+@font-face { font-family: "Be Vietnam Pro"; font-style: normal; font-weight: 500; font-display: swap; src: url("be-vietnam-pro-500-vietnamese.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: "Be Vietnam Pro"; font-style: normal; font-weight: 500; font-display: swap; src: url("be-vietnam-pro-500-latin.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Be Vietnam Pro"; font-style: normal; font-weight: 600; font-display: swap; src: url("be-vietnam-pro-600-vietnamese.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: "Be Vietnam Pro"; font-style: normal; font-weight: 600; font-display: swap; src: url("be-vietnam-pro-600-latin.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Be Vietnam Pro"; font-style: normal; font-weight: 700; font-display: swap; src: url("be-vietnam-pro-700-vietnamese.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: "Be Vietnam Pro"; font-style: normal; font-weight: 700; font-display: swap; src: url("be-vietnam-pro-700-latin.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Be Vietnam Pro"; font-style: normal; font-weight: 800; font-display: swap; src: url("be-vietnam-pro-800-vietnamese.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: "Be Vietnam Pro"; font-style: normal; font-weight: 800; font-display: swap; src: url("be-vietnam-pro-800-latin.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+:root { --blue-50: #eff6ff; --blue-100: #dbeafe; --blue-200: #bfdbfe; --blue-500: #3b82f6; --blue-600: #1e40af; --blue-700: #1e3a8a; --blue-900: #172554; --accent: #ff6b35; --accent-soft: #ffefe6; --em-red: #dc2626; --ink-900: #0a1330; --ink-700: #0a1330; --ink-500: #0a1330; --ink-400: #0a1330; --ink-300: #0a1330; --line: #e6ebf5; --line-strong: #cfd7e8; --surface: #f5f7fc; --surface-2: #edf1fa; --white: #ffffff; --ff-display: "Be Vietnam Pro", system-ui, sans-serif; --ff-body: "SVN-Gilroy", "Be Vietnam Pro", system-ui, sans-serif; --ff-serif: "Be Vietnam Pro", system-ui, sans-serif; --ease: cubic-bezier(0.22, 1, 0.36, 1); --ease-soft: cubic-bezier(0.4, 0, 0.2, 1); --shadow-sm: 0 1px 2px rgba(10, 19, 48, 0.04), 0 1px 1px rgba(10, 19, 48, 0.03); --shadow-md: 0 8px 24px -8px rgba(10, 19, 48, 0.1), 0 2px 6px rgba(10, 19, 48, 0.04); --shadow-lg: 0 24px 60px -20px rgba(10, 19, 48, 0.18), 0 8px 20px -10px rgba(10, 19, 48, 0.06); --shadow-blue: 0 18px 44px -12px rgba(30, 64, 175, 0.32); }
+*, ::before, ::after { box-sizing: border-box; margin: 0px; padding: 0px; }
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+#bbViewModal #hpo-sign-page, #bbViewModal #hpo-sign-page * { box-sizing: border-box; }
+#bbViewModal #hpo-sign-page { margin: 0px; color: rgb(0, 0, 0); font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.4; }
+#bbViewModal #hpo-sign-page img { max-width: 100%; height: auto; }
+#bbViewModal #hpo-sign-layout { max-width: 1200px; margin: 0px auto; padding: 0px 16px 18px; display: flex; gap: 16px; align-items: flex-start; }
+#bbViewModal #hpo-sign-sidebar-wrap { width: 340px; min-width: 340px; flex: 0 0 340px; position: sticky; top: var(--hpo-top, 16px); align-self: flex-start; z-index: 30; }
+#bbViewModal #hpo-sign-sidebar { position: relative; background: rgb(255, 255, 255); border: 1px solid rgb(226, 232, 240); border-radius: 18px; box-shadow: rgba(2, 6, 23, 0.08) 0px 14px 34px; }
+#bbViewModal #hpo-sign-sidebar > div { border-radius: 18px; overflow: hidden; }
+#bbViewModal #hpo-sign-sidebar > div > div:first-child { padding: 18px 18px 14px; border-bottom: 1px solid rgb(226, 232, 240); }
+#bbViewModal #hpo-sign-sidebar .hpo-sidebar-title { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; white-space: nowrap; color: rgb(0, 0, 0); }
+#bbViewModal #hpo-sign-sidebar .hpo-sidebar-title > span { min-width: 0px; overflow: hidden; font-size: clamp(17px, 1.8vw, 20px); font-weight: 850; line-height: 1.3; text-overflow: ellipsis; }
+#bbViewModal #hpo-sign-sidebar .hpo-sidebar-title > small { flex: 0 0 auto; padding: 4px 8px; border: 1px solid rgb(191, 219, 254); border-radius: 999px; background: rgb(239, 246, 255); color: rgb(29, 78, 216); font-size: 13px; font-weight: 800; line-height: 1; }
+#bbViewModal #hpo-sign-tabs { padding: 16px; display: flex; flex-direction: column; gap: 14px; }
+#bbViewModal #hpo-sign-tabs a[data-hpo-tab] { display: flex; align-items: center; gap: 16px; width: 100%; min-height: 92px; padding: 12px; cursor: pointer; border-radius: 18px; border: 1px solid rgb(219, 227, 239); background: linear-gradient(rgb(255, 255, 255) 0%, rgb(248, 251, 255) 100%); box-shadow: rgba(37, 99, 235, 0.08) 0px 10px 20px; text-decoration: none; color: rgb(0, 0, 0); transition: transform 0.16s, box-shadow 0.16s, border-color 0.16s, background 0.16s; }
+#bbViewModal #hpo-sign-tabs a[data-hpo-tab]:hover { transform: translateY(-1px); border-color: rgb(29, 78, 216); box-shadow: rgba(37, 99, 235, 0.14) 0px 14px 28px; background: linear-gradient(rgb(255, 255, 255) 0%, rgb(238, 246, 255) 100%); }
+#bbViewModal #hpo-sign-tabs a[data-hpo-tab].is-active { border-color: rgb(220, 38, 38); box-shadow: rgba(220, 38, 38, 0.18) 0px 12px 26px; background: linear-gradient(rgb(255, 255, 255) 0%, rgb(255, 241, 242) 100%); }
+#bbViewModal #hpo-sign-tabs a[data-hpo-tab].is-active .hpo-tab-title { color: rgb(220, 38, 38); }
+#bbViewModal #hpo-sign-tabs .hpo-tab-thumb { width: 92px; height: 68px; min-width: 92px; flex: 0 0 92px; display: block; overflow: hidden; border-radius: 15px; border: 1px solid rgba(226, 232, 240, 0.9); background: radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.65)); }
+#bbViewModal #hpo-sign-tabs .hpo-tab-thumb img { display: block; width: 100%; height: 100%; max-width: none; object-fit: contain; transform: scale(1.06); transform-origin: center center; }
+#bbViewModal #hpo-sign-tabs .hpo-tab-body { display: block; flex: 1 1 auto; min-width: 0px; text-align: left; color: rgb(0, 0, 0); }
+#bbViewModal #hpo-sign-tabs .hpo-tab-title, #bbViewModal #hpo-sign-tabs .hpo-tab-meta, #bbViewModal #hpo-sign-tabs .hpo-tab-count { display: block; text-align: left; }
+#bbViewModal #hpo-sign-tabs .hpo-tab-title { font-size: 16px; font-weight: 950; line-height: 1.25; color: rgb(0, 0, 0); }
+#bbViewModal #hpo-sign-tabs .hpo-tab-meta { margin-top: 5px; font-size: 12px; font-weight: 750; line-height: 1.25; color: rgb(0, 0, 0); }
+#bbViewModal #hpo-sign-tabs .hpo-tab-meta b { font-weight: 900; }
+#bbViewModal #hpo-sign-tabs .hpo-tab-meta b.is-red { color: rgb(220, 38, 38); }
+#bbViewModal #hpo-sign-tabs .hpo-tab-meta b.is-yellow { color: rgb(202, 138, 4); }
+#bbViewModal #hpo-sign-tabs .hpo-tab-meta b.is-blue { color: rgb(37, 99, 235); }
+#bbViewModal #hpo-sign-tabs .hpo-tab-meta b.is-black { color: rgb(0, 0, 0); }
+#bbViewModal #hpo-sign-tabs .hpo-tab-count { margin-top: 6px; font-size: 19px; font-weight: 950; line-height: 1.05; color: rgb(29, 78, 216); }
+#bbViewModal #hpo-sign-tabs a[data-hpo-tab="bien-cam"] .hpo-tab-title::before { content: "1. "; }
+#bbViewModal #hpo-sign-tabs a[data-hpo-tab="nguy-hiem"] .hpo-tab-title::before { content: "2. "; }
+#bbViewModal #hpo-sign-tabs a[data-hpo-tab="hieu-lenh"] .hpo-tab-title::before { content: "3. "; }
+#bbViewModal #hpo-sign-tabs a[data-hpo-tab="chi-dan"] .hpo-tab-title::before { content: "4. "; }
+#bbViewModal #hpo-sign-tabs a[data-hpo-tab="bien-phu"] .hpo-tab-title::before { content: "5. "; }
+#bbViewModal #hpo-sign-content { flex: 1 1 auto; min-width: 0px; display: flex; flex-direction: column; gap: 14px; color: rgb(0, 0, 0); }
+#bbViewModal #hpo-sign-page [data-hpo-pane] { display: block; scroll-margin-top: calc(var(--hpo-scroll-top, 16px) + 18px); }
+#bbViewModal #hpo-sign-page [data-hpo-pane] + [data-hpo-pane] { margin-top: 14px; }
+#bbViewModal #hpo-sign-page .hpo-pane-card { padding: 18px; border: 1px solid rgb(226, 232, 240); border-radius: 20px; background: rgb(255, 255, 255); box-shadow: rgba(2, 6, 23, 0.06) 0px 14px 34px; }
+#bbViewModal #hpo-sign-page .hpo-pane-icon { display: none; }
+#bbViewModal #hpo-sign-page .hpo-pane-head { display: flex; justify-content: center; align-items: center; text-align: center; padding: 6px 0px 2px; }
+#bbViewModal #hpo-sign-page .hpo-pane-text { max-width: 760px; color: rgb(0, 0, 0); }
+#bbViewModal #hpo-sign-page .hpo-pane-title { font-size: 30px; font-weight: 950; line-height: 1.15; color: rgb(0, 0, 0); }
+#bbViewModal #hpo-sign-page .hpo-pane-subtitle { margin-top: 6px; font-size: 14px; font-weight: 650; line-height: 1.55; color: rgb(0, 0, 0); }
+#bbViewModal #hpo-sign-page [data-hpo-pane="bien-cam"] .hpo-pane-title::before { content: "1. "; }
+#bbViewModal #hpo-sign-page [data-hpo-pane="nguy-hiem"] .hpo-pane-title::before { content: "2. "; }
+#bbViewModal #hpo-sign-page [data-hpo-pane="hieu-lenh"] .hpo-pane-title::before { content: "3. "; }
+#bbViewModal #hpo-sign-page [data-hpo-pane="chi-dan"] .hpo-pane-title::before { content: "4. "; }
+#bbViewModal #hpo-sign-page [data-hpo-pane="bien-phu"] .hpo-pane-title::before { content: "5. "; }
+#bbViewModal #hpo-sign-page .hpo-sign-detail { margin-top: 14px; font-weight: 650; line-height: 1.8; color: rgb(0, 0, 0); }
+#bbViewModal #hpo-sign-page .hpo-sign-detail ul { padding-left: 18px; margin: 18px 0px 24px; display: flex; flex-direction: column; gap: 12px; list-style: disc; color: rgb(0, 0, 0); }
+#bbViewModal #hpo-sign-page .hpo-sign-detail ul li { display: list-item; margin: 0px; color: rgb(0, 0, 0); }
+#bbViewModal #hpo-sign-page .hpo-sign-detail .hpo-li-sub { margin-left: 18px; list-style: circle; }
+#bbViewModal #hpo-sign-page .hpo-sign-detail b { font-weight: 900; color: rgb(0, 0, 0); }
+#bbViewModal #hpo-sign-page .hpo-sign-img { margin: 20px 0px 28px; display: flex; justify-content: center; }
+#bbViewModal #hpo-sign-page .hpo-sign-img img { width: 70%; max-width: 520px; display: block; border: 1px solid rgb(226, 232, 240); border-radius: 14px; }
+#bbViewModal #hpo-sign-page .hpo-sign-img img.singleImg, #bbViewModal #hpo-sign-page img.singleImg { width: 50%; }
+#bbViewModal #hpo-sign-page img[src*="Hieulenh5"] { width: 40%; }
+#bbViewModal #hpo-sign-page .hpo-sign-transition-cta { display: flex; justify-content: center; margin: 8px 0px 6px; padding: 22px 0px 6px; border-top: 1px solid rgb(226, 232, 240); }
+#bbViewModal #hpo-sign-page .hpo-sign-transition-cta a { display: inline-flex; align-items: center; justify-content: center; min-width: 180px; min-height: 48px; padding: 12px 28px; border-radius: 999px; background: rgb(225, 29, 46); color: rgb(255, 255, 255); font-size: 16px; font-weight: 850; line-height: 1.2; text-decoration: none; box-shadow: rgba(225, 29, 46, 0.24) 0px 8px 20px; transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s; }
+#bbViewModal #hpo-sign-page .hpo-sign-transition-cta a:hover { transform: translateY(-2px); background: rgb(190, 18, 60); box-shadow: rgba(190, 18, 60, 0.3) 0px 10px 24px; }
+#bbViewModal #hpo-sign-footer { margin-top: 2px; font-size: 12px; font-weight: 750; color: rgb(0, 0, 0); }
+@media (max-width: 900px) {
+#bbViewModal #hpo-sign-layout { display: block; }
+#bbViewModal #hpo-sign-sidebar-wrap { position: relative; top: auto; width: 100%; min-width: 0px; flex: 0 0 auto; margin-bottom: 14px; }
+#bbViewModal #hpo-sign-page .hpo-sign-img img { width: 92%; max-width: 560px; }
+#bbViewModal #hpo-sign-tabs .hpo-tab-thumb img { transform: scale(1.06); }
+}
+@font-face { font-family: SVN-Gilroy; font-style: normal; font-weight: 300; font-display: swap; src: url("/assets/fonts/svn-gilroy/svn-gilroy-light.woff2") format("woff2"); }
+@font-face { font-family: SVN-Gilroy; font-style: normal; font-weight: 400; font-display: swap; src: url("/assets/fonts/svn-gilroy/svn-gilroy-regular.woff2") format("woff2"); }
+@font-face { font-family: SVN-Gilroy; font-style: normal; font-weight: 500; font-display: swap; src: url("/assets/fonts/svn-gilroy/svn-gilroy-medium.woff2") format("woff2"); }
+@font-face { font-family: SVN-Gilroy; font-style: normal; font-weight: 600; font-display: swap; src: url("/assets/fonts/svn-gilroy/svn-gilroy-semibold.woff2") format("woff2"); }
+@font-face { font-family: SVN-Gilroy; font-style: normal; font-weight: 700; font-display: swap; src: url("/assets/fonts/svn-gilroy/svn-gilroy-bold.woff2") format("woff2"); }
+@font-face { font-family: SVN-Gilroy; font-style: normal; font-weight: 800; font-display: swap; src: url("/assets/fonts/svn-gilroy/svn-gilroy-xbold.woff2") format("woff2"); }
+@font-face { font-family: SVN-Gilroy; font-style: normal; font-weight: 900; font-display: swap; src: url("/assets/fonts/svn-gilroy/svn-gilroy-black.woff2") format("woff2"); }
+@font-face { font-family: "Be Vietnam Pro"; font-style: italic; font-weight: 400; font-display: swap; src: url("/assets/fonts/be-vietnam-pro/be-vietnam-pro-400-italic-vietnamese.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: "Be Vietnam Pro"; font-style: italic; font-weight: 400; font-display: swap; src: url("/assets/fonts/be-vietnam-pro/be-vietnam-pro-400-italic-latin.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Be Vietnam Pro"; font-style: italic; font-weight: 600; font-display: swap; src: url("/assets/fonts/be-vietnam-pro/be-vietnam-pro-600-italic-vietnamese.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: "Be Vietnam Pro"; font-style: italic; font-weight: 600; font-display: swap; src: url("/assets/fonts/be-vietnam-pro/be-vietnam-pro-600-italic-latin.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Be Vietnam Pro"; font-style: italic; font-weight: 700; font-display: swap; src: url("/assets/fonts/be-vietnam-pro/be-vietnam-pro-700-italic-vietnamese.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: "Be Vietnam Pro"; font-style: italic; font-weight: 700; font-display: swap; src: url("/assets/fonts/be-vietnam-pro/be-vietnam-pro-700-italic-latin.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Be Vietnam Pro"; font-style: normal; font-weight: 400; font-display: swap; src: url("/assets/fonts/be-vietnam-pro/be-vietnam-pro-400-vietnamese.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: "Be Vietnam Pro"; font-style: normal; font-weight: 400; font-display: swap; src: url("/assets/fonts/be-vietnam-pro/be-vietnam-pro-400-latin.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Be Vietnam Pro"; font-style: normal; font-weight: 500; font-display: swap; src: url("/assets/fonts/be-vietnam-pro/be-vietnam-pro-500-vietnamese.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: "Be Vietnam Pro"; font-style: normal; font-weight: 500; font-display: swap; src: url("/assets/fonts/be-vietnam-pro/be-vietnam-pro-500-latin.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Be Vietnam Pro"; font-style: normal; font-weight: 600; font-display: swap; src: url("/assets/fonts/be-vietnam-pro/be-vietnam-pro-600-vietnamese.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: "Be Vietnam Pro"; font-style: normal; font-weight: 600; font-display: swap; src: url("/assets/fonts/be-vietnam-pro/be-vietnam-pro-600-latin.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Be Vietnam Pro"; font-style: normal; font-weight: 700; font-display: swap; src: url("/assets/fonts/be-vietnam-pro/be-vietnam-pro-700-vietnamese.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: "Be Vietnam Pro"; font-style: normal; font-weight: 700; font-display: swap; src: url("/assets/fonts/be-vietnam-pro/be-vietnam-pro-700-latin.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Be Vietnam Pro"; font-style: normal; font-weight: 800; font-display: swap; src: url("/assets/fonts/be-vietnam-pro/be-vietnam-pro-800-vietnamese.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: "Be Vietnam Pro"; font-style: normal; font-weight: 800; font-display: swap; src: url("/assets/fonts/be-vietnam-pro/be-vietnam-pro-800-latin.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Be Vietnam Pro"; font-style: normal; font-weight: 900; font-display: swap; src: url("/assets/fonts/be-vietnam-pro/be-vietnam-pro-900-vietnamese.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: "Be Vietnam Pro"; font-style: normal; font-weight: 900; font-display: swap; src: url("/assets/fonts/be-vietnam-pro/be-vietnam-pro-900-latin.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+:root { --hp-ds-title-blue: linear-gradient(100deg, #1e3a8a 0%, #2b26fb 45%, #2b26fb 55%, #1e3a8a 100%); --hp-ds-title-red: linear-gradient(100deg, #b91c1c 0%, #ea1e24 45%, #ea1e24 55%, #b91c1c 100%); --hp-ds-lead-bar: linear-gradient(90deg, #2b26fb, #faec1a); --hp-ds-glow: radial-gradient(ellipse, rgba(43, 38, 251, .09) 0%, rgba(43, 38, 251, .03) 44%, transparent 72%); }
+:root { --hp-section-title-size: clamp(26px, calc(2.2vw + 10px), 40px); }
+
+
+/* Khung trang xem độc lập: bỏ lớp phủ/khung modal V2, cuộn cả trang. */
+html, body { margin: 0; min-height: 100%; background: #f8fafc; }
+body { font-family: "SVN-Gilroy", "Be Vietnam Pro", system-ui, sans-serif; color: #0a1330; }
+#bbViewModal, #bbViewModal .bb-view-shell, #bbViewModal .bb-view-scroll {
+  position: static !important; inset: auto !important; display: block !important; width: auto !important; height: auto !important;
+  max-width: none !important; max-height: none !important; margin: 0 !important; padding: 0 !important; overflow: visible !important;
+  transform: none !important; opacity: 1 !important; visibility: visible !important; background: transparent !important;
+  border: 0 !important; border-radius: 0 !important; box-shadow: none !important; pointer-events: auto !important;
+}
+</style>
+</head>
+<body>
+<div id="bbViewModal" class="bb-view-modal is-open"><div class="bb-view-shell"><div class="bb-view-scroll">
+<div
+  class="hpo-sign-page"
+  id="hpo-sign-page"
+>
+  <div id="hpo-sign-layout">
+    <div id="hpo-sign-sidebar-wrap">
+      <div id="hpo-sign-sidebar">
+        <div>
+          <div>
+            <div class="hpo-sidebar-title">
+              <span>Biển báo hiệu</span>
+              <small>5 nhóm</small>
+            </div>
+          </div>
+          <div id="hpo-sign-tabs">
+            <a
+              data-hpo-tab="bien-cam"
+              href="#"
+              ><span class="hpo-tab-thumb"
+                ><img
+                  alt="Biển cấm"
+                  src="https://hpo.edu.vn/wp-content/uploads/2026/01/bbcam.png" /></span
+              ><span class="hpo-tab-body"
+                ><span class="hpo-tab-title">Biển báo cấm</span
+                ><span class="hpo-tab-meta"
+                  >Tròn · <b class="is-red">Viền đỏ</b></span
+                ><span class="hpo-tab-count">63 kiểu</span></span
+              ></a
+            ><a
+              data-hpo-tab="nguy-hiem"
+              href="#"
+              ><span class="hpo-tab-thumb"
+                ><img
+                  alt="Nguy hiểm"
+                  src="https://hpo.edu.vn/wp-content/uploads/2026/01/bbNguyHiem.png" /></span
+              ><span class="hpo-tab-body"
+                ><span class="hpo-tab-title">Biển nguy hiểm</span
+                ><span class="hpo-tab-meta"
+                  >Tam giác · <b class="is-yellow">Vàng</b></span
+                ><span class="hpo-tab-count">83 kiểu</span></span
+              ></a
+            ><a
+              data-hpo-tab="hieu-lenh"
+              href="#"
+              ><span class="hpo-tab-thumb"
+                ><img
+                  alt="Hiệu lệnh"
+                  src="https://hpo.edu.vn/wp-content/uploads/2026/01/bbHieuLenh.png" /></span
+              ><span class="hpo-tab-body"
+                ><span class="hpo-tab-title">Biển hiệu lệnh</span
+                ><span class="hpo-tab-meta"
+                  >Tròn · <b class="is-blue">Nền xanh</b></span
+                ><span class="hpo-tab-count">65 kiểu</span></span
+              ></a
+            ><a
+              data-hpo-tab="chi-dan"
+              href="#"
+              ><span class="hpo-tab-thumb"
+                ><img
+                  alt="Chỉ dẫn"
+                  src="https://hpo.edu.vn/wp-content/uploads/2026/01/bbChiDan.png" /></span
+              ><span class="hpo-tab-body"
+                ><span class="hpo-tab-title">Biển chỉ dẫn</span
+                ><span class="hpo-tab-meta"
+                  >Chữ nhật · <b class="is-blue">Xanh</b></span
+                ><span class="hpo-tab-count">92 kiểu</span></span
+              ></a
+            ><a
+              data-hpo-tab="bien-phu"
+              href="#"
+              ><span class="hpo-tab-thumb"
+                ><img
+                  alt="Biển phụ"
+                  src="https://hpo.edu.vn/wp-content/uploads/2026/01/bbPhu.png" /></span
+              ><span class="hpo-tab-body"
+                ><span class="hpo-tab-title">Biển phụ</span
+                ><span class="hpo-tab-meta"
+                  >Chữ nhật · <b class="is-black">Trắng</b></span
+                ><span class="hpo-tab-count">31 kiểu</span></span
+              ></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="hpo-sign-content">
+      <div
+        class="is-active hpo-pane-card"
+        data-hpo-pane="bien-cam"
+      >
+        <div class="hpo-pane-head">
+          <div class="hpo-pane-icon">
+            <img
+              alt="Biển cấm"
+              src="https://hpo.edu.vn/wp-content/uploads/2026/01/bbcam.png"
+            />
+          </div>
+          <div class="hpo-pane-text">
+            <div class="hpo-pane-title">Biển báo cấm</div>
+            <div class="hpo-pane-subtitle">
+              Biểu thị các điều cấm người tham gia giao thông không được vi phạm.
+            </div>
+          </div>
+        </div>
+        <div class="hpo-sign-detail">
+          <ul>
+            <li>
+              Nhóm biển báo cấm là nhóm biển biểu thị các điều cấm mà người tham gia
+              giao thông không được vi phạm.
+            </li>
+            <li>
+              Nhóm biển báo cấm gồm có <b>63 kiểu</b> với mã <b>P (cấm)</b> và
+              <b>DP (hết cấm)</b>.
+            </li>
+            <li>
+              Các biển được đánh số thứ tự từ <b>biển số 101 đến biển số 140</b>.
+            </li>
+          </ul>
+          <div class="hpo-sign-img">
+            <img
+              alt="Biển báo cấm"
+              src="https://hpo.edu.vn/wp-content/uploads/2026/01/Cam1.png"
+            />
+          </div>
+          <ul>
+            <li>Các biển báo cấm đều có <b>dạng hình tròn</b>.</li>
+            <li>
+              Riêng các biển <b>DP.133, DP.134, DP.135</b> có <b>viền màu xanh</b>,
+              dùng để chỉ hiệu lực kết thúc của điều cấm.
+            </li>
+          </ul>
+          <div class="hpo-sign-img">
+            <img
+              alt="Hình dạng biển báo cấm"
+              src="https://hpo.edu.vn/wp-content/uploads/2026/01/Cam2.png"
+            />
+          </div>
+          <ul>
+            <li>Nền của hầu hết các biển báo cấm là <b>màu trắng</b>.</li>
+            <li>
+              Riêng nhóm biển <b>cấm dừng xe và cấm đỗ xe</b> có
+              <b>nền màu xanh</b> để dễ phân biệt.
+            </li>
+          </ul>
+          <div class="hpo-sign-img">
+            <img
+              alt="Màu nền biển báo cấm"
+              src="https://hpo.edu.vn/wp-content/uploads/2026/01/Cam3.png"
+            />
+          </div>
+          <ul>
+            <li>
+              Trên nền biển có vẽ <b>hình màu đen</b>, mang ý nghĩa trực quan để biểu
+              thị điều cấm hoặc hạn chế sự đi lại của người và phương tiện tham gia
+              giao thông.
+            </li>
+          </ul>
+          <div class="hpo-sign-img">
+            <img
+              alt="Ký hiệu trên biển báo cấm"
+              src="https://hpo.edu.vn/wp-content/uploads/2026/01/Cam4.png"
+            />
+          </div>
+        </div>
+        <div class="hpo-sign-transition-cta">
+          <a
+            href="https://gateway.hpo.edu.vn/signup"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Đăng ký ngay
+          </a>
+        </div>
+      </div>
+      <div
+        class="hpo-pane-card"
+        data-hpo-pane="nguy-hiem"
+      >
+        <div class="hpo-pane-head">
+          <div class="hpo-pane-icon">
+            <img
+              alt="Nguy hiểm"
+              src="https://hpo.edu.vn/wp-content/uploads/2026/01/bbNguyHiem.png"
+            />
+          </div>
+          <div class="hpo-pane-text">
+            <div class="hpo-pane-title">Biển nguy hiểm và cảnh báo</div>
+            <div class="hpo-pane-subtitle">
+              Báo trước các tình huống nguy hiểm có thể xảy ra.
+            </div>
+          </div>
+        </div>
+        <div class="hpo-sign-detail">
+          <ul>
+            <li>
+              Nhóm biển báo nguy hiểm và cảnh báo là nhóm biển báo cho người tham gia
+              giao thông biết trước các nguy hiểm trên đường để chủ động phòng ngừa
+              kịp thời.
+            </li>
+            <li>
+              Nhóm biển báo nguy hiểm gồm có <b>83 kiểu</b> với mã số
+              <b>W (cảnh báo)</b>
+            </li>
+            <li>Đánh số thứ tự từ <b>biển số W.201 đến biển số W.247</b>.</li>
+          </ul>
+          <div class="hpo-sign-img">
+            <img
+              alt="Biển báo nguy hiểm"
+              src="https://hpo.edu.vn/wp-content/uploads/2026/01/Nguyhiem1.png"
+            />
+          </div>
+          <ul>
+            <li>
+              Hầu hết các biển báo nguy hiểm có <b>dạng hình tam giác đều</b>,
+              <b>viền đỏ</b>, <b>nền màu vàng</b>.
+            </li>
+            <li>
+              Trên nền biển có vẽ <b>hình màu đen</b> để mô tả trực quan các tình
+              huống nguy hiểm có thể xảy ra trên đường.
+            </li>
+          </ul>
+          <div class="hpo-sign-img">
+            <img
+              alt="Hình dạng và màu sắc biển báo nguy hiểm"
+              src="https://hpo.edu.vn/wp-content/uploads/2026/01/Nguyhiem2.png"
+            />
+          </div>
+        </div>
+        <div class="hpo-sign-transition-cta">
+          <a
+            href="https://gateway.hpo.edu.vn/signup"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Đăng ký ngay
+          </a>
+        </div>
+      </div>
+      <div
+        class="hpo-pane-card"
+        data-hpo-pane="hieu-lenh"
+      >
+        <div class="hpo-pane-head">
+          <div class="hpo-pane-icon">
+            <img
+              alt="Hiệu lệnh"
+              src="https://hpo.edu.vn/wp-content/uploads/2026/01/bbHieuLenh.png"
+            />
+          </div>
+          <div class="hpo-pane-text">
+            <div class="hpo-pane-title">Biển hiệu lệnh</div>
+            <div class="hpo-pane-subtitle">
+              Chỉ dẫn các hiệu lệnh bắt buộc phải chấp hành.
+            </div>
+          </div>
+        </div>
+        <div class="hpo-sign-detail">
+          <ul>
+            <li>
+              Nhóm biển hiệu lệnh là nhóm biển để báo các hiệu lệnh phải chấp hành.
+              Người tham gia giao thông phải chấp hành các hiệu lệnh trên biển báo.
+            </li>
+            <li>
+              Nhóm biển hiệu lệnh gồm có <b>65 kiểu</b> mã <b>R (hiệu lệnh)</b>, được
+              đánh số thứ tự:
+            </li>
+            <li class="hpo-li-sub">
+              Biển số <b>R.301</b> đến biển số <b>R.421</b>.
+            </li>
+          </ul>
+          <div class="hpo-sign-img">
+            <img
+              alt="Nhóm biển hiệu lệnh"
+              src="https://hpo.edu.vn/wp-content/uploads/2026/01/Hieulenh1.png"
+            />
+          </div>
+          <ul>
+            <li>
+              Biển hiệu lệnh có tác dụng trong khu vực từ biển số <b>R.E,9</b> đến
+              biển số <b>R.E,11</b>.
+            </li>
+          </ul>
+          <div class="hpo-sign-img">
+            <img
+              alt="Biển hiệu lệnh R.E,9"
+              src="https://hpo.edu.vn/wp-content/uploads/2026/01/Hieulenh2.png"
+            />
+          </div>
+          <div class="hpo-sign-img">
+            <img
+              alt="Biển hiệu lệnh R.E,10"
+              src="https://hpo.edu.vn/wp-content/uploads/2026/01/Hieulenh3.png"
+            />
+          </div>
+          <div class="hpo-sign-img">
+            <img
+              alt="Biển hiệu lệnh R.E,11"
+              class="singleImg"
+              src="https://hpo.edu.vn/wp-content/uploads/2026/01/Hieulenh4.png"
+            />
+          </div>
+          <ul>
+            <li>Biển hiệu lực dạng đặc biệt: <b>“Biển dừng lại R.122”</b>.</li>
+          </ul>
+          <div class="hpo-sign-img">
+            <img
+              alt="Biển dừng lại R.122"
+              src="https://hpo.edu.vn/wp-content/uploads/2026/01/Hieulenh5.png"
+            />
+          </div>
+          <ul>
+            <li>
+              Các biển hiệu lệnh còn lại đều có dạng <b>hình tròn</b>,
+              <b>nền màu xanh</b>, trên nền có vẽ <b>hình màu trắng</b> đặc trưng cho
+              hiệu lệnh.
+            </li>
+          </ul>
+          <div class="hpo-sign-img">
+            <img
+              alt="Hình dạng và màu sắc biển hiệu lệnh"
+              src="https://hpo.edu.vn/wp-content/uploads/2026/01/Hieulenh6.png"
+            />
+          </div>
+        </div>
+        <div class="hpo-sign-transition-cta">
+          <a
+            href="https://gateway.hpo.edu.vn/signup"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Đăng ký ngay
+          </a>
+        </div>
+      </div>
+      <div
+        class="hpo-pane-card"
+        data-hpo-pane="chi-dan"
+      >
+        <div class="hpo-pane-head">
+          <div class="hpo-pane-icon">
+            <img
+              alt="Chỉ dẫn"
+              src="https://hpo.edu.vn/wp-content/uploads/2026/01/bbChiDan.png"
+            />
+          </div>
+          <div class="hpo-pane-text">
+            <div class="hpo-pane-title">Biển chỉ dẫn</div>
+            <div class="hpo-pane-subtitle">
+              Cung cấp thông tin và hướng dẫn cần thiết.
+            </div>
+          </div>
+        </div>
+        <div class="hpo-sign-detail">
+          <ul>
+            <li>
+              Nhóm biển chỉ dẫn là nhóm biển báo dùng để cung cấp thông tin và các
+              chỉ dẫn cần thiết cho người tham gia giao thông.
+            </li>
+            <li>Nhóm biển chỉ dẫn gồm có <b>92 kiểu</b>, mã <b>I (chỉ dẫn)</b></li>
+            <li>Được đánh số thứ tự từ <b>biển số I.401 đến biển số I.449</b>.</li>
+          </ul>
+          <div class="hpo-sign-img">
+            <img
+              alt="Nhóm biển chỉ dẫn"
+              src="https://hpo.edu.vn/wp-content/uploads/2026/01/Chidan1.png"
+            />
+          </div>
+          <ul>
+            <li>
+              Các biển chỉ dẫn có dạng <b>hình chữ nhật</b> hoặc <b>hình vuông</b>,
+              <b>nền màu xanh lam</b>, trên nền có
+              <b>hình vẽ và chữ viết màu trắng</b>.
+            </li>
+          </ul>
+          <div class="hpo-sign-img">
+            <img
+              alt="Hình dạng và màu sắc biển chỉ dẫn"
+              src="https://hpo.edu.vn/wp-content/uploads/2026/01/Chidan2.png"
+            />
+          </div>
+          <ul>
+            <li>
+              Trường hợp biển chỉ dẫn có <b>nền màu trắng</b> thì
+              <b>hình vẽ và chữ viết là màu đen</b> để đảm bảo dễ quan sát.
+            </li>
+          </ul>
+          <div class="hpo-sign-img">
+            <img
+              alt="Biển chỉ dẫn nền trắng"
+              src="https://hpo.edu.vn/wp-content/uploads/2026/01/Chidan3.png"
+            />
+          </div>
+        </div>
+        <div class="hpo-sign-transition-cta">
+          <a
+            href="https://gateway.hpo.edu.vn/signup"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Đăng ký ngay
+          </a>
+        </div>
+      </div>
+      <div
+        class="hpo-pane-card"
+        data-hpo-pane="bien-phu"
+      >
+        <div class="hpo-pane-head">
+          <div class="hpo-pane-icon">
+            <img
+              alt="Biển phụ"
+              src="https://hpo.edu.vn/wp-content/uploads/2026/01/bbPhu.png"
+            />
+          </div>
+          <div class="hpo-pane-text">
+            <div class="hpo-pane-title">Biển phụ</div>
+            <div class="hpo-pane-subtitle">Bổ sung ý nghĩa cho biển chính.</div>
+          </div>
+        </div>
+        <div class="hpo-sign-detail">
+          <ul>
+            <li>Nhóm biển phụ gồm có <b>31 kiểu</b>.</li>
+            <li>
+              Mã <b>S (phụ)</b> được đánh số thứ tự từ
+              <b>biển số S.501 đến biển số S.510</b>.
+            </li>
+          </ul>
+          <div class="hpo-sign-img">
+            <img
+              alt="Nhóm biển phụ"
+              src="https://hpo.edu.vn/wp-content/uploads/2026/01/Phu1.png"
+            />
+          </div>
+          <ul>
+            <li>
+              Biển chỉ dẫn theo hiệp định <b>GMS</b> từ
+              <b>biển số S.G7 đến biển số S.G12</b>.
+            </li>
+          </ul>
+          <div class="hpo-sign-img">
+            <img
+              alt="Biển phụ theo hiệp định GMS"
+              src="https://hpo.edu.vn/wp-content/uploads/2026/01/Phu2.png"
+            />
+          </div>
+          <ul>
+            <li>
+              Biển báo phụ <b>“Ngoại lệ”</b> dùng để chỉ các trường hợp không áp dụng
+              theo nội dung của biển báo chính.
+            </li>
+          </ul>
+          <div class="hpo-sign-img">
+            <img
+              alt="Biển phụ Ngoại lệ"
+              class="singleImg"
+              src="https://hpo.edu.vn/wp-content/uploads/2026/01/Phu3.png"
+            />
+          </div>
+          <ul>
+            <li>
+              Biển phụ thường được đặt <b>kết hợp (đặt phía dưới)</b> các biển báo
+              nguy hiểm, biển báo cấm hoặc hạn chế, biển hiệu lệnh và biển chỉ dẫn
+              nhằm thuyết minh, bổ sung để hiểu rõ ý nghĩa của biển chính.
+            </li>
+            <li>
+              Riêng biển số <b>S.507 “Hướng rẽ”</b> được sử dụng <b>độc lập</b>.
+            </li>
+          </ul>
+          <div class="hpo-sign-img">
+            <img
+              alt="Cách sử dụng biển phụ"
+              class="singleImg"
+              src="https://hpo.edu.vn/wp-content/uploads/2026/01/Phu4.png"
+            />
+          </div>
+          <ul>
+            <li>
+              Biển phụ có dạng <b>hình chữ nhật</b> hoặc <b>hình vuông</b>,
+              <b>nền màu trắng</b>, <b>viền đen</b>, trên nền có
+              <b>hình vẽ và chữ viết màu đen</b>.
+            </li>
+          </ul>
+          <div class="hpo-sign-img">
+            <img
+              alt="Hình dạng và màu sắc biển phụ"
+              src="https://hpo.edu.vn/wp-content/uploads/2026/01/Phu5.png"
+            />
+          </div>
+        </div>
+      </div>
+      <div id="hpo-sign-footer">© Hiệp Phát — Nội dung tổng hợp</div>
+    </div>
+  </div>
+</div>
+
+</div></div></div>
+<script src="/assets/learning-views/learning-view-tabs-and-media.js" defer></script>
+</body>
+</html>

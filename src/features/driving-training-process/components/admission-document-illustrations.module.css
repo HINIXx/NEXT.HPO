@@ -1,0 +1,288 @@
+/*
+ * Đồ họa động thẻ giấy tờ Bước 1 (V2 quy-dinh-chuong-trinh-hoc-lai-xe/styles/process.css mục 1–4).
+ * Ngoại lệ "chỉ Tailwind" (AGENTS.md): đây là hình minh họa động, không phải bố cục.
+ * Trạng thái kích hoạt: rê chuột / focus vào thẻ, hoặc island tự chạy gắn `data-auto-active` lên thẻ.
+ */
+
+.card {
+  --flip-ease: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --soft-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Ảnh tĩnh nhấp nhô (đơn đề nghị, giấy khám sức khỏe) — lệch pha theo --float-delay/--float-duration. */
+.floatingImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 10px rgba(10, 19, 48, 0.06));
+  animation: float-illustration var(--float-duration, 4s) ease-in-out
+    var(--float-delay, 0s) infinite;
+  transition:
+    transform 0.45s var(--soft-ease),
+    filter 0.45s var(--soft-ease);
+}
+.card:hover .floatingImage {
+  animation-play-state: paused;
+  transform: translateY(-8px) scale(1.04);
+  filter: drop-shadow(0 14px 28px rgba(10, 19, 48, 0.14));
+}
+@keyframes float-illustration {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* 1. Thẻ CCCD / GPLX lật mặt sau. */
+.documentStack {
+  position: relative;
+  width: 92%;
+  aspect-ratio: 1.48 / 1;
+  perspective: 1200px;
+  transform-style: preserve-3d;
+}
+.flipCard {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  transform-style: preserve-3d;
+  transform: translateZ(10px) rotate(-2deg);
+  transition: transform 0.8s var(--flip-ease);
+}
+.flipInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s var(--flip-ease);
+}
+.flipFace {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 12px;
+  backface-visibility: hidden;
+}
+.flipFace img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 14px rgba(10, 19, 48, 0.12));
+}
+.flipBack {
+  transform: rotateY(180deg);
+}
+.card:hover .flipCard,
+.card:focus-within .flipCard,
+.card[data-auto-active] .flipCard {
+  transform: translateY(-6px) translateZ(20px) rotate(0deg);
+}
+.card:hover .flipInner,
+.card:focus-within .flipInner,
+.card[data-auto-active] .flipInner {
+  transform: rotateY(180deg);
+}
+
+/* 2. Điện thoại VNeID phóng nhẹ. */
+.vneidPhone {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 20px rgba(10, 19, 48, 0.12));
+  transition:
+    transform 0.55s var(--soft-ease),
+    filter 0.55s var(--soft-ease);
+}
+.card:hover .vneidPhone,
+.card:focus-within .vneidPhone,
+.card[data-auto-active] .vneidPhone {
+  transform: scale(1.08);
+  filter: drop-shadow(0 16px 28px rgba(10, 19, 48, 0.18));
+}
+
+/* 3. Điện thoại "Đang gọi…". */
+.callingPhone {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+/* V2 đặt width 52% nhưng bị `.process-illustration img {width/height:100%}` đè → ảnh thực tế phủ cả khung. */
+.callingPhone > img {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.5s ease;
+}
+.callingOverlay {
+  position: absolute;
+  top: 5.5%;
+  left: 28.5%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 43%;
+  height: 94.5%;
+  padding: 12px 6px;
+  border-radius: 12px;
+  background: rgba(10, 19, 48, 0.94);
+  color: #fff;
+  opacity: 0;
+  transform: scale(0.92);
+  backdrop-filter: blur(6px);
+  transition:
+    opacity 0.4s var(--soft-ease),
+    transform 0.4s var(--soft-ease);
+}
+.card:hover .callingOverlay,
+.card[data-auto-active] .callingOverlay {
+  opacity: 1;
+  transform: scale(1);
+}
+.card:hover .callingPhone > img,
+.card[data-auto-active] .callingPhone > img {
+  transform: scale(0.96);
+}
+.callingAvatar {
+  position: relative;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  margin-bottom: 8px;
+  border-radius: 50%;
+  background: #1e40af;
+  box-shadow: 0 4px 10px rgba(30, 64, 175, 0.4);
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 800;
+}
+.callingPulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  width: 32px;
+  height: 32px;
+  margin: -16px 0 0 -16px;
+  border-radius: 50%;
+  background: #1e40af;
+  opacity: 0;
+}
+.card:hover .callingPulse,
+.card[data-auto-active] .callingPulse {
+  animation: call-pulse 2s infinite ease-out var(--pulse-delay, 0s);
+}
+@keyframes call-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+.callingTitle {
+  margin-bottom: 2px;
+  color: #34d399;
+  font-family: var(--font-display);
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  animation: calling-blink 1.5s infinite;
+}
+@keyframes calling-blink {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.callingSub {
+  margin-bottom: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 8px;
+  white-space: nowrap;
+}
+.callingActions {
+  display: flex;
+  gap: 12px;
+  margin-top: auto;
+}
+.callingButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+/* 4. Ảnh 3x4 xòe quạt. */
+.photoFan {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+.photoCopy {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: clamp(116px, 48%, 144px);
+  height: auto;
+  aspect-ratio: 3 / 4;
+  border-radius: 3px;
+  object-fit: cover;
+  object-position: center top;
+  transform: translate(-50%, -50%) var(--stack-transform);
+  transform-origin: 50% 100%;
+  transition:
+    transform 0.72s var(--flip-ease),
+    box-shadow 0.42s var(--soft-ease),
+    filter 0.42s var(--soft-ease);
+}
+.card:hover .photoCopy,
+.card:focus-within .photoCopy,
+.card[data-auto-active] .photoCopy {
+  transform: translate(-50%, -50%) var(--fan-transform);
+  box-shadow: 0 15px 30px rgba(10, 19, 48, 0.18);
+  filter: saturate(1.03);
+}
+@media (max-width: 640px) {
+  .photoCopy {
+    width: clamp(110px, 44%, 136px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floatingImage,
+  .callingTitle,
+  .card .callingPulse {
+    animation: none !important;
+  }
+  .flipCard,
+  .flipInner,
+  .photoCopy,
+  .vneidPhone,
+  .callingOverlay {
+    transition: none;
+  }
+}
