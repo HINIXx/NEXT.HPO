@@ -12,18 +12,41 @@ import {
   trainingProcessSectionClassName,
 } from "./training-process-shared-typography";
 
-/** Bước 1 (V2 `#tuyen-sinh`): 7 thẻ giấy tờ, 4 cột · ≤1100px 2 cột · ≤640px 1 cột. */
-export function AdmissionRequiredDocumentsSection() {
+/** Tên ngắn 7 giấy tờ cho danh sách đánh số (V2 trang Ưu đãi `.tn-doc-checklist`). */
+const admissionChecklistItems = [
+  "CCCD",
+  "VNeID",
+  "GPLX nếu có (A, A1, B1,...)",
+  "Đơn đề nghị học lái xe theo mẫu quy định tại Phụ lục X ban hành kèm TT 14/2025/TT-BXD",
+  "Số điện thoại liên hệ",
+  "Ảnh 3x4",
+  "Giấy khám sức khỏe của người lái xe, người điều khiển xe chuyên dụng.",
+];
+
+/**
+ * 7 thẻ giấy tờ, 4 cột · ≤1100px 2 cột · ≤640px 1 cột.
+ * Trang Quy trình: Bước 1 (V2 `#tuyen-sinh`). Trang Ưu đãi: nhãn "Hướng dẫn những hồ sơ cần nộp" + danh sách 1–7,
+ * đệm trên/dưới gọn hơn (V2 `uu-dai-page #tuyen-sinh` 36/64 · ≤640px 24/48).
+ */
+export function AdmissionRequiredDocumentsSection({
+  eyebrow = "Bước 01",
+  showChecklist = false,
+  sectionClassName = trainingProcessSectionClassName,
+}: {
+  eyebrow?: string;
+  showChecklist?: boolean;
+  sectionClassName?: string;
+}) {
   return (
     <section
       id="tuyen-sinh"
       aria-labelledby="admission-title"
-      className={trainingProcessSectionClassName}
+      className={sectionClassName}
     >
       <AdmissionCardsAutoDemoActivator />
       <div className="container-site">
         <TrainingProcessSectionHead
-          eyebrow="Bước 01"
+          eyebrow={eyebrow}
           titleId="admission-title"
           title={
             <>
@@ -31,6 +54,29 @@ export function AdmissionRequiredDocumentsSection() {
             </>
           }
           description="Học viên chuẩn bị thông tin cá nhân, giấy tờ theo yêu cầu và hoàn tất học phí để được xác nhận nhập học trước khi bắt đầu chương trình đào tạo."
+          extra={
+            showChecklist ? (
+              <ol
+                aria-label="7 giấy tờ cần nộp"
+                className="mt-[18px] grid max-w-[900px] gap-2.5"
+              >
+                {admissionChecklistItems.map((item, index) => (
+                  <li
+                    key={item}
+                    className="text-ink relative pl-11 text-[19px] leading-[1.5] font-semibold"
+                  >
+                    <span
+                      aria-hidden="true"
+                      className="absolute top-0 left-0 font-extrabold"
+                    >
+                      {index + 1}
+                    </span>
+                    {item}
+                  </li>
+                ))}
+              </ol>
+            ) : null
+          }
         />
         <div className="grid grid-cols-1 gap-5 min-[641px]:grid-cols-2 xl:grid-cols-4">
           {admissionRequiredDocuments.map((document, position) => (

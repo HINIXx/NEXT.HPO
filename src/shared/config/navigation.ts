@@ -80,6 +80,7 @@ export const publicRoutes: readonly { path: string; priority: number }[] = [
   { path: "/gioi-thieu/trung-tam-giao-duc-nghe-nghiep/", priority: 0.8 },
   { path: "/gioi-thieu/trung-tam-sat-hach/", priority: 0.8 },
   { path: "/hoc-phi/", priority: 0.8 },
+  { path: "/chuong-trinh-uu-dai/", priority: 0.8 },
   { path: "/quy-dinh-chuong-trinh-hoc-lai-xe/", priority: 0.8 },
   { path: "/on-tap/", priority: 0.7 },
   { path: "/danh-sach-benh-vien/", priority: 0.6 },

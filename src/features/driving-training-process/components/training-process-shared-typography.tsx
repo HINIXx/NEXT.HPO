@@ -50,11 +50,14 @@ export function TrainingProcessSectionHead({
   title,
   titleId,
   description,
+  extra,
 }: {
   eyebrow: string;
   title: ReactNode;
   titleId: string;
   description: ReactNode;
+  /** Nội dung thêm dưới mô tả, trong khoảng đầu section (vd danh sách giấy tờ trang Ưu đãi). */
+  extra?: ReactNode;
 }) {
   return (
     <div className="mb-[42px]">
@@ -71,6 +74,7 @@ export function TrainingProcessSectionHead({
       <p className="mt-4 max-w-[68ch] text-[17px] leading-[1.65] text-[#334155] lg:text-[18px]">
         {description}
       </p>
+      {extra}
     </div>
   );
 }
