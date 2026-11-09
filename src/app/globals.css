@@ -91,6 +91,7 @@
   --ease-hp-soft: cubic-bezier(0.4, 0, 0.2, 1);
 
   --animate-phone-ring: phone-ring 2.6s ease-out infinite;
+  --animate-title-sheen: title-sheen 7s ease-in-out infinite alternate;
   --animate-float-ring: float-ring 2.4s ease-in-out infinite;
 
   @keyframes phone-ring {
@@ -101,6 +102,14 @@
     to {
       transform: scale(1.25);
       opacity: 0;
+    }
+  }
+  @keyframes title-sheen {
+    from {
+      background-position: 0% 50%;
+    }
+    to {
+      background-position: 100% 50%;
     }
   }
   @keyframes float-ring {
@@ -252,4 +261,30 @@
   @variant lg {
     padding-inline: 28px;
   }
+}
+
+/* Tiêu đề section kiểu Design System (V2 homepage-headings-design-system.css + homepage-section-headings-compact.css):
+   chữ gradient "Xanh Hiệp Phát" #1e3a8a → #2b26fb, ánh sáng trôi 7s, cỡ 40px máy tính → 26px điện thoại.
+   padding-top .12em: chữ gradient (background-clip: text) cần chỗ cho dấu tiếng Việt dòng trên. */
+@utility section-title-hp {
+  padding: 0.12em 0 0.04em;
+  font-family: var(--font-display);
+  font-size: clamp(26px, calc(2.2vw + 10px), 40px);
+  font-weight: 800;
+  line-height: 1.2;
+  text-wrap: balance;
+  color: #1e3a8a;
+  background-image: linear-gradient(
+    100deg,
+    #1e3a8a 0%,
+    #2b26fb 45%,
+    #2b26fb 55%,
+    #1e3a8a 100%
+  );
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 8px 18px rgba(43, 38, 251, 0.14));
+  animation: var(--animate-title-sheen);
 }

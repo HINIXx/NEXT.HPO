@@ -8,6 +8,9 @@ export const contact = {
   hotlineHref: "tel:02836362362",
   /** Dạng quốc tế cho JSON-LD. */
   hotlineE164: "+842836362362",
+  /** Số tư vấn khóa học (khối "Khóa học linh động", V2 hiện "0911.739.119 — 028.36.362.362"). */
+  courseAdvisorPhone: "0911.739.119",
+  courseAdvisorPhoneHref: "tel:0911739119",
   email: "tuyensinh@hpo.edu.vn",
   emailHref: "mailto:tuyensinh@hpo.edu.vn",
   /** Thanh trên cùng header. */

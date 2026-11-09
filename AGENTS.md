@@ -31,6 +31,8 @@ Giao tiếp với user bằng tiếng Việt.
   ```
 - **Server Component mặc định.** Chỉ tách island `"use client"` nhỏ cho phần cần trạng thái (ví dụ `site-header-sticky-nav-shell.tsx`, `site-header-mobile-menu-drawer.tsx`, `site-floating-quick-actions.tsx`). Nội dung chữ phải có sẵn trong HTML.
 - **Không** chép CSS V2, **không** nhét HTML chuỗi qua `dangerouslySetInnerHTML` (ngoại lệ duy nhất: JSON-LD). Viết lại thành component Tailwind, dữ liệu lặp → mảng có kiểu trong `data/` hoặc `src/content/`.
+  Ngoại lệ đã dùng: đồ họa động không phải bố cục (mặt đường 3D, mâm xe quay, hộp quà…) → CSS module cạnh component, ví dụ `src/features/courses/components/courses-animated-scene.module.css`.
+- Khối dùng chung đã có: Khóa học học phí `src/features/courses/` (trang chủ/TT GDNN/Ưu đãi dùng lại), đầu trang tra cứu `src/components/sections/dark-navy-lookup-tool-page-hero.tsx`, tiêu đề section gradient `section-title-hp` (globals.css).
 - Mỗi trang: `export const metadata = createPageMetadata({ title, path, description })` — giữ đúng title/description của V2. Chuyển xong trang nào → thêm vào `publicRoutes` (`src/shared/config/navigation.ts`) để vào sitemap và để smoke test bắt 404 của route đó.
 - File `.tsx` tối đa 300 dòng (ESLint). Tên file kebab-case, dài, tự mô tả.
 - Ảnh: `next/image` có `width`/`height`; ảnh dưới màn đầu `loading="lazy"`. Giữ URL `/assets/...` như V2.

@@ -77,4 +77,8 @@ export const privacyPolicyLink: NavLink = {
  */
 export const publicRoutes: readonly { path: string; priority: number }[] = [
   { path: "/", priority: 1 },
+  { path: "/hoc-phi/", priority: 0.8 },
+  { path: "/danh-sach-benh-vien/", priority: 0.6 },
+  { path: "/tra-cuu-qr/", priority: 0.6 },
+  { path: "/chinh-sach-bao-mat/", priority: 0.3 },
 ];

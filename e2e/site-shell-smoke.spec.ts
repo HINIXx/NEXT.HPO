@@ -22,60 +22,62 @@ const isPendingRoute = (url: string) => {
   return pendingPaths.some((path) => pathname.startsWith(path));
 };
 
-for (const width of [390, 1024, 1440, 1920]) {
-  test(`site shell at ${width}px`, async ({ page, baseURL }) => {
-    const errors: string[] = [];
-    const failedResponses: string[] = [];
-    const origin = new URL(baseURL!).origin;
+for (const { path } of publicRoutes)
+  for (const width of [390, 1024, 1440, 1920]) {
+    test(`${path} at ${width}px`, async ({ page, baseURL }) => {
+      const errors: string[] = [];
+      const failedResponses: string[] = [];
+      const origin = new URL(baseURL!).origin;
 
-    page.on("console", (message) => {
-      if (
-        message.type() === "error" &&
-        !externalError(message.text()) &&
-        !isPendingRoute(message.location().url || "http://x/")
-      )
-        errors.push(message.text());
-    });
-    page.on("pageerror", (error) => {
-      if (!externalError(error.message)) errors.push(error.message);
-    });
-    page.on("response", (response) => {
-      if (
-        new URL(response.url()).origin === origin &&
-        response.status() >= 400 &&
-        !isPendingRoute(response.url())
-      ) {
-        failedResponses.push(`${response.status()} ${response.url()}`);
-      }
-    });
+      page.on("console", (message) => {
+        if (
+          message.type() === "error" &&
+          !externalError(message.text()) &&
+          !isPendingRoute(message.location().url || "http://x/")
+        )
+          errors.push(message.text());
+      });
+      page.on("pageerror", (error) => {
+        if (!externalError(error.message)) errors.push(error.message);
+      });
+      page.on("response", (response) => {
+        if (
+          new URL(response.url()).origin === origin &&
+          response.status() >= 400 &&
+          !isPendingRoute(response.url())
+        ) {
+          failedResponses.push(`${response.status()} ${response.url()}`);
+        }
+      });
 
-    await page.setViewportSize({ width, height: 900 });
-    await page.goto("/");
-    await expect(page.locator("nav#navbar")).toBeVisible();
-    await expect(page.locator("footer#lien-he")).toBeAttached();
-    await expect(page.locator('html[lang="vi"]')).toHaveCount(1);
-    await expect(page.locator('link[rel="canonical"]')).toHaveCount(1);
-    await expect(
-      page.locator('script[type="application/ld+json"]'),
-    ).toHaveCount(1);
-
-    if (width === 390) {
-      await page.getByRole("button", { name: "Mở menu" }).click();
+      await page.setViewportSize({ width, height: 900 });
+      await page.goto(path);
+      await expect(page.locator("nav#navbar")).toBeVisible();
+      await expect(page.locator("h1")).toHaveCount(1);
+      await expect(page.locator("footer#lien-he")).toBeAttached();
+      await expect(page.locator('html[lang="vi"]')).toHaveCount(1);
+      await expect(page.locator('link[rel="canonical"]')).toHaveCount(1);
       await expect(
-        page.getByRole("dialog").getByRole("link", { name: "Học phí" }),
-      ).toBeVisible();
-      await page.keyboard.press("Escape");
-      await expect(page.getByRole("dialog")).toHaveCount(0);
-    }
+        page.locator('script[type="application/ld+json"]'),
+      ).toHaveCount(1);
 
-    const scrollWidth = await page.evaluate(
-      () => document.documentElement.scrollWidth,
-    );
-    expect(
-      scrollWidth,
-      `horizontal overflow at ${width}px`,
-    ).toBeLessThanOrEqual(width);
-    expect(failedResponses).toEqual([]);
-    expect(errors).toEqual([]);
-  });
-}
+      if (width === 390 && path === "/") {
+        await page.getByRole("button", { name: "Mở menu" }).click();
+        await expect(
+          page.getByRole("dialog").getByRole("link", { name: "Học phí" }),
+        ).toBeVisible();
+        await page.keyboard.press("Escape");
+        await expect(page.getByRole("dialog")).toHaveCount(0);
+      }
+
+      const scrollWidth = await page.evaluate(
+        () => document.documentElement.scrollWidth,
+      );
+      expect(
+        scrollWidth,
+        `horizontal overflow at ${width}px`,
+      ).toBeLessThanOrEqual(width);
+      expect(failedResponses).toEqual([]);
+      expect(errors).toEqual([]);
+    });
+  }
