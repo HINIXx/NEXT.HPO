@@ -16,6 +16,12 @@ type PageMetadataInput = {
   description?: string;
   /** Ảnh OG riêng của trang (đường dẫn trong public/). Mặc định: logo. */
   ogImage?: { url: string; width: number; height: number; alt: string };
+  /**
+   * Ghi đè chỉ thị robots của trang (mặc định theo `siteConfig.indexingEnabled`).
+   * V2 đánh dấu `noindex, nofollow` cho trang ưu đãi vì giá ưu đãi riêng từng xã
+   * (URL có `?location=`) — không nên để máy tìm kiếm lập chỉ mục.
+   */
+  robots?: { index: boolean; follow: boolean };
 };
 
 /**
@@ -28,12 +34,15 @@ export function createPageMetadata({
   path,
   description = siteConfig.description,
   ogImage = siteConfig.defaultOgImage,
+  robots,
 }: PageMetadataInput): Metadata {
   const canonical = toCanonicalPath(path);
   return {
     title: { absolute: title },
     description,
     alternates: { canonical },
+    // Trang không ghi đè thì theo mặc định của site (noindex tới khi duyệt SEO production).
+    ...(robots ? { robots: { ...robots } } : {}),
     openGraph: {
       type: "website",
       locale: "vi_VN",

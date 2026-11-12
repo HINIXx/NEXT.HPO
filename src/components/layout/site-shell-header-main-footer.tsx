@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { SiteFloatingQuickActions } from "./site-floating-quick-actions";
 import { SiteFooter } from "./site-footer";
 import { SiteHeader } from "./site-header";
+import { SiteRobotCompanionLoader } from "./site-robot-companion-loader";
 
 export function SiteShellHeaderMainFooter({
   children,
@@ -20,6 +21,7 @@ export function SiteShellHeaderMainFooter({
       <main id="main-content">{children}</main>
       <SiteFooter />
       <SiteFloatingQuickActions />
+      <SiteRobotCompanionLoader />
       <div
         aria-hidden
         className="h-[calc(64px+env(safe-area-inset-bottom,0px))] sm:hidden"

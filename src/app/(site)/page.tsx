@@ -40,6 +40,7 @@ export default function HomePage() {
         slides={[
           {
             label: "Kỷ nguyên AI trong đào tạo lái xe",
+            robotHookClassName: "hpo-digital-hero",
             content: (
               <DigitalDrivingEraWelcomeHero
                 ariaLabel="Kỷ nguyên AI trong đào tạo lái xe"
@@ -51,6 +52,7 @@ export default function HomePage() {
           },
           {
             label: "Giới thiệu công ty",
+            robotHookClassName: "company-banner",
             content: <CompanyIntroductionBannerSlide />,
           },
         ]}

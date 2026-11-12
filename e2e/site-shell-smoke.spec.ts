@@ -57,9 +57,21 @@ for (const { path } of publicRoutes)
       await expect(page.locator("footer#lien-he")).toBeAttached();
       await expect(page.locator('html[lang="vi"]')).toHaveCount(1);
       await expect(page.locator('link[rel="canonical"]')).toHaveCount(1);
-      await expect(
-        page.locator('script[type="application/ld+json"]'),
-      ).toHaveCount(1);
+      // JSON-LD: đúng 1 khối tổ chức (layout) + Breadcrumb ở trang con; khối nào cũng là JSON hợp lệ.
+      const jsonLdTypes = await page
+        .locator('script[type="application/ld+json"]')
+        .evaluateAll((scripts) =>
+          scripts.map(
+            (script) =>
+              (JSON.parse(script.textContent || "{}") as { "@type"?: string })[
+                "@type"
+              ],
+          ),
+        );
+      expect(
+        jsonLdTypes.filter((type) => type === "EducationalOrganization"),
+      ).toHaveLength(1);
+      expect(jsonLdTypes.includes("BreadcrumbList")).toBe(path !== "/");
 
       if (width === 390 && path === "/") {
         await page.getByRole("button", { name: "Mở menu" }).click();

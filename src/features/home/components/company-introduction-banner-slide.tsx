@@ -31,7 +31,7 @@ export function CompanyIntroductionBannerSlide({
       )}
     >
       <div className="grid w-full max-w-[1266px] grid-cols-1 gap-x-7 gap-y-4 min-[1001px]:grid-cols-[minmax(0,0.67fr)_minmax(0,1fr)] min-[1001px]:gap-x-[4vw] min-[1001px]:gap-y-0">
-        <header className="col-span-full mb-[22px] flex flex-col items-center gap-3.5 pt-[34px] pb-3.5 text-center before:h-1 before:w-16 before:rounded-full before:bg-[linear-gradient(90deg,#2b26fb,#faec1a)] before:content-[''] min-[1001px]:mb-[34px]">
+        <header className="company-banner-heading col-span-full mb-[22px] flex flex-col items-center gap-3.5 pt-[34px] pb-3.5 text-center before:h-1 before:w-16 before:rounded-full before:bg-[linear-gradient(90deg,#2b26fb,#faec1a)] before:content-[''] min-[1001px]:mb-[34px]">
           <h2 className="font-display mx-auto w-fit bg-[linear-gradient(100deg,#1e3a8a_0%,#2b26fb_45%,#2b26fb_55%,#1e3a8a_100%)] bg-clip-text px-[0.04em] pt-[0.12em] text-[clamp(39px,5vw,72px)] leading-[1.08] font-black tracking-[-0.045em] text-balance text-[#1e3a8a] [-webkit-text-fill-color:transparent]">
             GIỚI THIỆU CÔNG TY
           </h2>
@@ -55,7 +55,7 @@ export function CompanyIntroductionBannerSlide({
         </button>
 
         <div className="min-[1001px]:col-start-1 min-[1001px]:row-start-2 min-[1001px]:self-center">
-          <p className="font-display mb-3.5 text-[22px] leading-[1.25] font-extrabold tracking-[-0.015em] text-[#dc2626] min-[1001px]:mb-[18px] min-[1001px]:text-[clamp(24px,2.2vw,32px)]">
+          <p className="company-banner-motto font-display mb-3.5 text-[22px] leading-[1.25] font-extrabold tracking-[-0.015em] text-[#dc2626] min-[1001px]:mb-[18px] min-[1001px]:text-[clamp(24px,2.2vw,32px)]">
             Đào tạo và sát hạch cùng một địa điểm
           </p>
           <ul className="text-ink grid gap-1.5 text-[17px] leading-[1.55] min-[1001px]:text-[clamp(18px,1.5vw,22px)]">

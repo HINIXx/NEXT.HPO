@@ -125,7 +125,7 @@ export function PromotionTrainingProgramOverviewSection() {
           <GroupHeading
             id="uu-learning-theory-title"
             title="Học lý thuyết"
-            subtitle="Luôn sẵn sàng mọi lúc, mọi nơi"
+            subtitle="Học mọi lúc, mọi nơi"
           />
           <div className="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-3">
             {theoryBenefits.map((benefit) => (

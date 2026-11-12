@@ -1,3 +1,5 @@
+import { StructuredDataJsonLdScript } from "@/components/seo/structured-data-json-ld-script";
+import { createBreadcrumbJsonLd } from "@/lib/seo/breadcrumb-json-ld";
 import { PrivacyPolicyDocument } from "@/features/privacy-policy/components/privacy-policy-document";
 import { createPageMetadata } from "@/lib/seo/create-page-metadata";
 
@@ -9,5 +11,12 @@ export const metadata = createPageMetadata({
 });
 
 export default function PrivacyPolicyPage() {
-  return <PrivacyPolicyDocument />;
+  return (
+    <>
+      <StructuredDataJsonLdScript
+        data={createBreadcrumbJsonLd("/chinh-sach-bao-mat/")}
+      />
+      <PrivacyPolicyDocument />
+    </>
+  );
 }

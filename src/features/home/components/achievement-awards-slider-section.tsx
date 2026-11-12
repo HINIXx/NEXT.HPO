@@ -14,7 +14,7 @@ const awards = [
     subtitle:
       "Sydney Australia, 28/06/2026 - Diễn đàn doanh nghiệp Việt Nam - Australia",
     topline: "Sydney · Australia · 28/06/2026",
-    src: "/assets/images/awards/global-excellent-brands-2026-slide-v2.png",
+    src: "/assets/images/awards/global-excellent-brands-2026-slide-v2.webp",
     alt: "Top 10 Global Excellent Brands 2026 của Hiệp Phát",
     width: 1884,
     height: 835,
@@ -25,7 +25,7 @@ const awards = [
     subtitle:
       "Singapore, 18/04/2026 - Diễn đàn hợp tác kinh tế Việt Nam - Asean",
     topline: "Singapore · 18/04/2026",
-    src: "/assets/images/awards/asean-strong-brand-2026-slide-v2.png",
+    src: "/assets/images/awards/asean-strong-brand-2026-slide-v2.webp",
     alt: "Top 5 ASEAN Strong Brand 2026 của Hiệp Phát",
     width: 1889,
     height: 833,
@@ -35,7 +35,7 @@ const awards = [
     name: "Thương hiệu Việt 2025",
     subtitle: "Việt Nam, 13/09/2025 - Thương hiệu Hàng Việt tốt 2025",
     topline: "Việt Nam · 13/09/2025",
-    src: "/assets/images/awards/hang-viet-tot-2025-landscape-v3.png",
+    src: "/assets/images/awards/hang-viet-tot-2025-landscape-v3.webp",
     alt: "Poster Thương hiệu Hàng Việt Tốt 2025 của Hiệp Phát",
     width: 1886,
     height: 834,

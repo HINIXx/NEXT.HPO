@@ -1,3 +1,5 @@
+import { StructuredDataJsonLdScript } from "@/components/seo/structured-data-json-ld-script";
+import { createBreadcrumbJsonLd } from "@/lib/seo/breadcrumb-json-ld";
 import { ScrollRevealActivator } from "@/components/sections/scroll-reveal-activator";
 import { AboutCenterFullBleedPhotoHero } from "@/features/about-centers/components/about-center-full-bleed-photo-hero";
 import { AboutNumberedFeatureTrioBand } from "@/features/about-centers/components/about-numbered-feature-trio-band";
@@ -33,6 +35,9 @@ export const metadata = createPageMetadata({
 export default function DrivingExamCenterPage() {
   return (
     <>
+      <StructuredDataJsonLdScript
+        data={createBreadcrumbJsonLd("/gioi-thieu/trung-tam-sat-hach/")}
+      />
       <ScrollRevealActivator />
       <AboutCenterFullBleedPhotoHero
         backgroundImageSrc={examCenterPanoramaPhotoSrc}

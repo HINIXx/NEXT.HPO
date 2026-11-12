@@ -18,7 +18,7 @@ const linkClass = "transition-colors duration-200 hover:text-white";
  */
 export function SiteHeaderTopUtilityBar() {
   return (
-    <div className="bg-ink hidden text-[12.5px] leading-[1.55] tracking-[0.01em] text-white/78 md:block">
+    <div className="topbar bg-ink hidden text-[12.5px] leading-[1.55] tracking-[0.01em] text-white/78 md:block">
       <div className="w-full px-[22px] lg:px-7">
         <div className="flex items-center justify-between gap-6 py-2.5">
           <div className="flex items-center gap-6">

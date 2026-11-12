@@ -35,7 +35,7 @@ export const admissionRequiredDocuments: readonly AdmissionRequiredDocument[] =
       illustration: {
         kind: "flip-card",
         frontSrc: `${admission}/cccd-front.jpg`,
-        backSrc: `${admission}/cccd-back.png`,
+        backSrc: `${admission}/cccd-back.webp`,
         width: 960,
         height: 606,
       },
@@ -54,8 +54,8 @@ export const admissionRequiredDocuments: readonly AdmissionRequiredDocument[] =
       description: "Bản photo giấy phép lái xe nếu học viên đã có.",
       illustration: {
         kind: "flip-card",
-        frontSrc: `${admission}/gplx-oto-front.png`,
-        backSrc: `${admission}/gplx-oto-back.png`,
+        frontSrc: `${admission}/gplx-oto-front.webp`,
+        backSrc: `${admission}/gplx-oto-back.webp`,
         width: 570,
         height: 438,
       },
@@ -67,7 +67,7 @@ export const admissionRequiredDocuments: readonly AdmissionRequiredDocument[] =
         "Đơn đề nghị học lái xe theo mẫu quy định tại Phụ lục X ban hành kèm TT 14/2025/TT-BXD",
       illustration: {
         kind: "floating-image",
-        src: `${admission}/dondenghi.png`,
+        src: `${admission}/dondenghi.webp`,
       },
       autoDemo: false,
     },
@@ -76,7 +76,7 @@ export const admissionRequiredDocuments: readonly AdmissionRequiredDocument[] =
       title: "Số điện thoại",
       description:
         "Số liên hệ chính để nhận lịch học, lịch kiểm tra và thông báo.",
-      illustration: { kind: "calling-phone", src: `${admission}/sdt.png` },
+      illustration: { kind: "calling-phone", src: `${admission}/sdt.webp` },
       autoDemo: true,
     },
     {
@@ -91,7 +91,7 @@ export const admissionRequiredDocuments: readonly AdmissionRequiredDocument[] =
       title: "Giấy khám sức khỏe",
       description:
         "Giấy khám sức khỏe của người lái xe, người điều khiển xe chuyên dụng.",
-      illustration: { kind: "floating-image", src: `${admission}/gksk.png` },
+      illustration: { kind: "floating-image", src: `${admission}/gksk.webp` },
       autoDemo: false,
     },
   ];

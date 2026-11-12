@@ -1,3 +1,5 @@
+import { StructuredDataJsonLdScript } from "@/components/seo/structured-data-json-ld-script";
+import { createBreadcrumbJsonLd } from "@/lib/seo/breadcrumb-json-ld";
 import { DarkNavyLookupToolPageHero } from "@/components/sections/dark-navy-lookup-tool-page-hero";
 import { HospitalLookupFilterableDirectory } from "@/features/hospital-lookup/components/hospital-lookup-filterable-directory";
 import {
@@ -22,6 +24,9 @@ const stats = [
 export default function HospitalListPage() {
   return (
     <div className="bg-[#f5f7fb]">
+      <StructuredDataJsonLdScript
+        data={createBreadcrumbJsonLd("/danh-sach-benh-vien/")}
+      />
       <DarkNavyLookupToolPageHero
         eyebrow="Tiện ích cho học viên HPO"
         title={

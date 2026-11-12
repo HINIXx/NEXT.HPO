@@ -39,7 +39,12 @@ function ChevronIcon({ d }: { d: string }) {
 export function HomeHeroIntroductionSlider({
   slides,
 }: {
-  slides: readonly { label: string; content: ReactNode }[];
+  /** `robotHookClassName`: class V2 mà bundle robot đọc (`hpo-digital-hero`, `company-banner`); wrapper slide đang xem có thêm `is-active`. */
+  slides: readonly {
+    label: string;
+    content: ReactNode;
+    robotHookClassName?: string;
+  }[];
 }) {
   const trackRef = useRef<HTMLDivElement>(null);
   const rootRef = useRef<HTMLDivElement>(null);
@@ -183,7 +188,7 @@ export function HomeHeroIntroductionSlider({
           go(active + (event.key === "ArrowRight" ? 1 : -1));
         }}
         style={{ height: trackHeight }}
-        className="flex snap-x snap-mandatory [scrollbar-width:none] items-start overflow-x-auto overflow-y-hidden transition-[height] duration-300 outline-none min-[1001px]:items-stretch [&::-webkit-scrollbar]:hidden"
+        className="company-slider-track flex snap-x snap-mandatory [scrollbar-width:none] items-start overflow-x-auto overflow-y-hidden transition-[height] duration-300 outline-none min-[1001px]:items-stretch [&::-webkit-scrollbar]:hidden"
       >
         {slides.map((slide, index) => (
           <div
@@ -192,7 +197,11 @@ export function HomeHeroIntroductionSlider({
             aria-roledescription="slide"
             aria-label={`${index + 1} / ${slides.length}: ${slide.label}`}
             inert={index !== active}
-            className="flex w-full flex-none snap-start snap-always flex-col [&>*]:flex-1"
+            className={cn(
+              "flex w-full flex-none snap-start snap-always flex-col [&>*]:flex-1",
+              slide.robotHookClassName,
+              index === active && "is-active",
+            )}
           >
             {slide.content}
           </div>

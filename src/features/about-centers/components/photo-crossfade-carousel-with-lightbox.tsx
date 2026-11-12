@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import {
+  Fragment,
   useCallback,
   useEffect,
   useRef,
@@ -150,7 +151,7 @@ export function PhotoCrossfadeCarouselWithLightbox({
         className="absolute inset-0 z-1 cursor-zoom-in"
       />
 
-      {overlay}
+      {overlay ? <Fragment key="carousel-overlay">{overlay}</Fragment> : null}
 
       <button
         type="button"

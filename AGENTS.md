@@ -37,6 +37,9 @@ Giao tiếp với user bằng tiếng Việt.
 - File `.tsx` tối đa 300 dòng (ESLint). Tên file kebab-case, dài, tự mô tả.
 - Ảnh: `next/image` có `width`/`height`; ảnh dưới màn đầu `loading="lazy"`. Giữ URL `/assets/...` như V2.
 - Route `/tien-do-thi-sat-hach/` đã bỏ — không tạo lại.
+- Robot 3D: nguồn `robot-companion/` (esbuild riêng, ngoài lint/typecheck Next) → `public/robot/dist/`; gắn bằng island `src/components/layout/site-robot-companion-loader.tsx` (tải sau `load` + 2s + idle, mount lại mỗi lần đổi trang). Class móc V2 (`.floats`, `.topbar`, `.hpo-digital-hero`, `.company-banner…`) trên component là để robot đọc — đừng xóa. Xem `robot-companion/README.md`.
+- JSON-LD: `<StructuredDataJsonLdScript>` (`src/components/seo/`); tổ chức ở layout, `createBreadcrumbJsonLd(path)` ở mỗi trang con (tên lấy từ menu), `createCourseOffersJsonLd` nằm trong khối Khóa học (theo giá đang hiện). Trang mới → thêm breadcrumb + tên vào `src/lib/seo/breadcrumb-json-ld.ts` nếu không có trên menu.
+- Ảnh > 300 KB → WebP (`cwebp -q 85 -alpha_q 100 -m 6 -sharp_yuv`), giữ kích thước.
 
 ## Token thiết kế (`src/app/globals.css`)
 
@@ -60,9 +63,28 @@ Giao tiếp với user bằng tiếng Việt.
 - Chỉ sửa file thuộc phạm vi việc được giao.
 - Giao việc cho Codex: viết `plans/handoff-<việc>/HANDOFF.md` (spec + lệnh kiểm + mẫu báo cáo `REPORT.md`); Claude duyệt diff + chụp ảnh so V2.
 
+## Chọn model (tiết kiệm token, vẫn ra kết quả tốt)
+
+- **Chất lượng là chính, tiết kiệm token là phụ.** Model rẻ làm việc cần reasoning sâu sẽ tốn nhiều hơn; model đắt cho việc dễ là lãng phí.
+- **Không tự đổi model.** Chỉ *gợi ý* ở cuối phiên, không tự nâng cấp.
+- Chia nhỏ task thay vì dùng model đắt cho một prompt khổng lồ; subagent mặc định dùng model `inherit`.
+- Đọc file có chọn lọc (`Grep` trước `Read`, `offset`/`limit`) — rẻ hơn model rẻ.
+- Chi tiết bảng phân loại (rẻ / trung bình / mạnh) + mẫu gợi ý cuối phiên: `~/.cursor/rules/model-selection-cost-aware.mdc`.
+- Cuối phiên, báo cáo kèm mục `Gợi ý model cho lần sau:` nêu việc vừa rồi nên dùng model nào (cụ thể) và vì sao.
+
 ## Kiểm tra trước khi báo xong
 
 1. `pnpm run lint && pnpm run typecheck && pnpm run build && pnpm run test:e2e`.
 2. Smoke test 390/1024/1440/1920: không tràn ngang, console sạch, không 404 cùng origin (trừ route chưa chuyển). Đổi header → test quét 1101–2000px phải đạt.
 3. Chụp ảnh trang đã chuyển cạnh V2 ở 4 khổ (mẫu: `plans/reports/screenshots-gd0/`).
 4. Báo lại: file chính, lệnh + kết quả, ảnh so sánh, việc chưa làm + lý do, câu hỏi còn mở.
+
+<!-- BEGIN:nextjs-agent-rules -->
+
+# This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+
+<!-- END:nextjs-agent-rules -->

@@ -36,7 +36,7 @@ export function SiteFloatingQuickActions() {
     <div
       role="group"
       aria-label="Hỗ trợ nhanh"
-      className="fixed inset-x-0 bottom-0 z-[90] flex flex-row items-center gap-2 border-t border-[#e2e8f0] bg-white px-3 pt-2 pb-[calc(8px+env(safe-area-inset-bottom,0px))] shadow-[0_-8px_24px_rgba(10,19,48,0.08)] min-[1440px]:right-6 min-[1440px]:bottom-6 min-[1440px]:gap-3 sm:right-3 sm:bottom-4 sm:left-auto sm:flex-col sm:gap-2.5 sm:border-0 sm:bg-transparent sm:p-0 sm:shadow-none"
+      className="floats fixed inset-x-0 bottom-0 z-[90] flex flex-row items-center gap-2 border-t border-[#e2e8f0] bg-white px-3 pt-2 pb-[calc(8px+env(safe-area-inset-bottom,0px))] shadow-[0_-8px_24px_rgba(10,19,48,0.08)] min-[1440px]:right-6 min-[1440px]:bottom-6 min-[1440px]:gap-3 sm:right-3 sm:bottom-4 sm:left-auto sm:flex-col sm:gap-2.5 sm:border-0 sm:bg-transparent sm:p-0 sm:shadow-none"
     >
       {isScrolled && (
         <button

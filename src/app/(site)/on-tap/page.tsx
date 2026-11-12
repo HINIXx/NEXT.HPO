@@ -1,3 +1,5 @@
+import { StructuredDataJsonLdScript } from "@/components/seo/structured-data-json-ld-script";
+import { createBreadcrumbJsonLd } from "@/lib/seo/breadcrumb-json-ld";
 import { DrivingTheoryQuizInteractiveWorkspace } from "@/features/driving-theory-quiz/components/driving-theory-quiz-interactive-workspace";
 import { DrivingTheoryQuizPageHero } from "@/features/driving-theory-quiz/components/driving-theory-quiz-page-hero";
 import { createPageMetadata } from "@/lib/seo/create-page-metadata";
@@ -13,6 +15,7 @@ export const metadata = createPageMetadata({
 export default function DrivingTheoryQuizPage() {
   return (
     <div className="bg-[#f3f6fb] text-black">
+      <StructuredDataJsonLdScript data={createBreadcrumbJsonLd("/on-tap/")} />
       <DrivingTheoryQuizPageHero />
       <DrivingTheoryQuizInteractiveWorkspace />
     </div>

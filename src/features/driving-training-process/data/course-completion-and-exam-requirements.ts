@@ -39,19 +39,19 @@ export const completionCheckItems: readonly {
     index: "03",
     title: "Bài liên hoàn",
     description: "Nội dung đào tạo thực hành lái xe",
-    image: image("completion-linked-course.png", 1254, 1254),
+    image: image("completion-linked-course.webp", 1254, 1254),
   },
   {
     index: "04",
     title: "Bài tiến lùi hình chữ chi",
     description: "Nội dung đào tạo thực hành lái xe",
-    image: image("evaluation-zigzag.png", 1774, 887),
+    image: image("evaluation-zigzag.webp", 1774, 887),
   },
   {
     index: "05",
     title: "Lái xe trên đường",
     description: "Nội dung đào tạo thực hành lái xe",
-    image: image("completion-road-driving.png", 500, 392),
+    image: image("completion-road-driving.webp", 500, 392),
   },
 ];
 
@@ -69,12 +69,12 @@ export const completionEligibilityConditions: readonly {
   {
     number: "2",
     text: "**Tham dự đủ thời gian** và **tối thiểu 50% quãng đường** học thực hành lái xe trên sân tập lái;",
-    image: image("completion-practice-yard.png", 496, 392),
+    image: image("completion-practice-yard.webp", 496, 392),
   },
   {
     number: "3",
     text: "**Tham dự đủ quãng đường** và **tối thiểu 50% thời gian** học thực hành lái xe trên đường;",
-    image: image("completion-road-driving.png", 500, 392),
+    image: image("completion-road-driving.webp", 500, 392),
   },
 ];
 
@@ -90,21 +90,21 @@ export const completionEvaluationProcedures: readonly {
     title:
       "Nội dung đào tạo lý thuyết, thực hành lái xe với bài liên hoàn và lái xe trên đường",
     description: "Theo quy trình sát hạch lái xe do Bộ Công an ban hành;",
-    image: image("evaluation-theory-practice.png", 1692, 929),
+    image: image("evaluation-theory-practice.webp", 1692, 929),
   },
   {
     step: "2",
     title: "Nội dung đào tạo mô phỏng các tình huống giao thông",
     description:
       "Theo quy định tại Phụ lục XXVIII ban hành kèm theo Thông tư này với thang điểm 10 (từ 1 đến 10) có tính đến hàng thập phân 1 con số;",
-    image: image("evaluation-simulator.png", 1536, 1024),
+    image: image("evaluation-simulator.webp", 1536, 1024),
   },
   {
     step: "3",
     title: "Nội dung đào tạo bài tiến lùi chữ chi",
     description:
       "Theo quy định tại Phụ lục XXIX ban hành kèm theo Thông tư này với thang điểm 10 (từ 1 đến 10) có tính đến hàng thập phân 1 con số;",
-    image: image("evaluation-zigzag.png", 1774, 887),
+    image: image("evaluation-zigzag.webp", 1774, 887),
   },
 ];
 
@@ -126,19 +126,19 @@ export const completionReviewRules: readonly {
     ],
     result:
       "Đạt yêu cầu với hạng tương ứng theo quy trình sát hạch lái xe do Bộ Công an ban hành.",
-    image: image("completion-result.png", 500, 392),
+    image: image("completion-result.webp", 500, 392),
   },
   {
     index: "2",
     items: ["Nội dung đào tạo mô phỏng các tình huống giao thông."],
     result: "Đạt từ 5,0 trở lên.",
-    image: image("evaluation-simulator.png", 1536, 1024),
+    image: image("evaluation-simulator.webp", 1536, 1024),
   },
   {
     index: "3",
     items: ["Nội dung đào tạo thực hành lái xe với bài tiến lùi chữ chi."],
     result: "Đạt từ 5,0 trở lên.",
-    image: image("evaluation-zigzag.png", 1774, 887),
+    image: image("evaluation-zigzag.webp", 1774, 887),
   },
 ];
 

@@ -49,6 +49,7 @@ export function VocationalCenterFacilitiesCarouselSection() {
               className={cn(cardClassName, "h-[390px] min-[621px]:h-full")}
               overlay={
                 <PhotoCarouselNumberedCaptionOverlay
+                  key="facility-practice-yard-overlay"
                   number="01"
                   title="Sân tập đạt chuẩn của bộ GTVT"
                   description="3 sân tập với hệ thống sa hình đa dạng"
@@ -68,6 +69,7 @@ export function VocationalCenterFacilitiesCarouselSection() {
               className={cn(cardClassName, "h-[300px] min-[621px]:h-full")}
               overlay={
                 <PhotoCarouselNumberedCaptionOverlay
+                  key="facility-training-vehicle-overlay"
                   number="02"
                   title="Xe đào tạo đời mới"
                   description="3 dòng xe · Số tự động, số sàn và xe tải C1"

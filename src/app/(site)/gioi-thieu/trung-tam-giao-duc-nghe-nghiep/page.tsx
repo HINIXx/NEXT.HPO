@@ -1,3 +1,5 @@
+import { StructuredDataJsonLdScript } from "@/components/seo/structured-data-json-ld-script";
+import { createBreadcrumbJsonLd } from "@/lib/seo/breadcrumb-json-ld";
 import { ScrollRevealActivator } from "@/components/sections/scroll-reveal-activator";
 import {
   AboutCenterFullBleedPhotoHero,
@@ -41,6 +43,11 @@ export const metadata = createPageMetadata({
 export default function VocationalTrainingCenterPage() {
   return (
     <>
+      <StructuredDataJsonLdScript
+        data={createBreadcrumbJsonLd(
+          "/gioi-thieu/trung-tam-giao-duc-nghe-nghiep/",
+        )}
+      />
       <ScrollRevealActivator />
       <AboutCenterFullBleedPhotoHero
         backgroundImageSrc={vocationalCenterGatePhotoSrc}

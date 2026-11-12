@@ -3,6 +3,8 @@ import {
   courseTuitionOfferings,
   courseTuitionPromoDeadline,
 } from "../data/course-tuition-offerings";
+import { StructuredDataJsonLdScript } from "@/components/seo/structured-data-json-ld-script";
+import { createCourseOffersJsonLd } from "@/lib/seo/course-offers-json-ld";
 import { CourseTuitionCardsInteractiveList } from "./course-tuition-cards-interactive-list";
 import scene from "./courses-animated-scene.module.css";
 
@@ -33,6 +35,9 @@ export function CoursesTuitionShowcaseSection({
       aria-labelledby="courses-title"
       className={`${scene.scene} font-display relative isolate flex items-start overflow-hidden bg-[#eef4fb] pt-9 pb-[clamp(64px,8vw,112px)] text-[#0f1f3d] sm:pt-12`}
     >
+      <StructuredDataJsonLdScript
+        data={createCourseOffersJsonLd(courses, courseTuitionPromoDeadline)}
+      />
       <div
         className="pointer-events-none absolute inset-0 -z-1"
         aria-hidden="true"

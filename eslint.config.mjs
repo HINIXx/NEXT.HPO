@@ -17,6 +17,8 @@ const eslintConfig = defineConfig([
     "public/**",
     // Ghi chú + script chụp ảnh nội bộ (gitignore), không phải mã nguồn site.
     "plans/**",
+    // Robot 3D: dự án esbuild riêng (nguồn V2 robot/), build ra public/robot/dist.
+    "robot-companion/**",
     // Default ignores of eslint-config-next:
     ".next/**",
     "out/**",

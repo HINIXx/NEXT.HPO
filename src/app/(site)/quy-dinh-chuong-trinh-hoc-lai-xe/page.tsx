@@ -1,3 +1,5 @@
+import { StructuredDataJsonLdScript } from "@/components/seo/structured-data-json-ld-script";
+import { createBreadcrumbJsonLd } from "@/lib/seo/breadcrumb-json-ld";
 import { ScrollRevealActivator } from "@/components/sections/scroll-reveal-activator";
 import {
   AdmissionRegistrationCallToAction,
@@ -28,6 +30,9 @@ export const metadata = createPageMetadata({
 export default function DrivingTrainingProcessPage() {
   return (
     <>
+      <StructuredDataJsonLdScript
+        data={createBreadcrumbJsonLd("/quy-dinh-chuong-trinh-hoc-lai-xe/")}
+      />
       <ScrollRevealActivator />
       <TrainingProcessPageHero />
       <TrainingProcessStickyStepNavigation />

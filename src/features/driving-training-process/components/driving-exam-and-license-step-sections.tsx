@@ -206,7 +206,7 @@ export function DrivingLicenseIssuanceStepSection() {
           >
             <div className="relative aspect-[570/438] transition-transform duration-600 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] motion-reduce:transition-none">
               <Image
-                src={`${admission}/gplx-oto-front.png`}
+                src={`${admission}/gplx-oto-front.webp`}
                 alt=""
                 width={570}
                 height={438}
@@ -214,12 +214,12 @@ export function DrivingLicenseIssuanceStepSection() {
                 className="absolute inset-0 size-full [backface-visibility:hidden]"
               />
               <Image
-                src={`${admission}/gplx-oto-back.png`}
+                src={`${admission}/gplx-oto-back.webp`}
                 alt=""
                 width={573}
                 height={436}
                 loading="lazy"
-                className="absolute inset-0 size-full [transform:rotateY(180deg)] [backface-visibility:hidden]"
+                className="absolute inset-0 size-full [transform:rotateY(180deg)] object-cover [backface-visibility:hidden]"
               />
             </div>
           </figure>

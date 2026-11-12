@@ -1,3 +1,5 @@
+import { StructuredDataJsonLdScript } from "@/components/seo/structured-data-json-ld-script";
+import { createBreadcrumbJsonLd } from "@/lib/seo/breadcrumb-json-ld";
 import { DarkNavyLookupToolPageHero } from "@/components/sections/dark-navy-lookup-tool-page-hero";
 import { ExamFeeQrLookupInteractiveWorkspace } from "@/features/exam-fee-qr-lookup/components/exam-fee-qr-lookup-interactive-workspace";
 import { ExamFeeQrPaymentStepsGuide } from "@/features/exam-fee-qr-lookup/components/exam-fee-qr-payment-steps-guide";
@@ -14,6 +16,9 @@ export const metadata = createPageMetadata({
 export default function ExamFeeQrLookupPage() {
   return (
     <div className="bg-[#f4f6fa]">
+      <StructuredDataJsonLdScript
+        data={createBreadcrumbJsonLd("/tra-cuu-qr/")}
+      />
       <DarkNavyLookupToolPageHero
         eyebrow="Thanh toán trực tuyến"
         title={

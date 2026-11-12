@@ -27,7 +27,7 @@ export function DigitalDrivingEraWelcomeHero({
   return (
     <section
       aria-label={ariaLabel}
-      className={cn("relative bg-white", className)}
+      className={cn("hpo-digital-hero relative bg-white", className)}
     >
       <div className="mx-auto max-w-[1480px] px-3 pt-11 pb-[34px] text-center sm:px-[4vw] sm:pt-[45px] sm:pb-[42px] xl:pt-10">
         <p

@@ -1,3 +1,5 @@
+import { StructuredDataJsonLdScript } from "@/components/seo/structured-data-json-ld-script";
+import { createBreadcrumbJsonLd } from "@/lib/seo/breadcrumb-json-ld";
 import { DigitalDrivingEraWelcomeHero } from "@/components/sections/digital-driving-era-welcome-hero";
 import { ScrollRevealActivator } from "@/components/sections/scroll-reveal-activator";
 import { ConsultationRegistrationFormCard } from "@/features/consultation-registration/components/consultation-registration-form-card";
@@ -12,6 +14,8 @@ export const metadata = createPageMetadata({
   path: "/chuong-trinh-uu-dai/",
   description:
     "Những giấy tờ cần nộp khi đăng ký học lái xe ô tô và các địa điểm nhận hồ sơ của chương trình ưu đãi tại địa phương.",
+  // V2: giá ưu đãi riêng từng xã (URL có `?location=`) → không cho máy tìm kiếm lập chỉ mục.
+  robots: { index: false, follow: false },
 });
 
 /**
@@ -23,6 +27,9 @@ export const metadata = createPageMetadata({
 export default function PromotionOfferPage() {
   return (
     <>
+      <StructuredDataJsonLdScript
+        data={createBreadcrumbJsonLd("/chuong-trinh-uu-dai/")}
+      />
       <ScrollRevealActivator />
       <DigitalDrivingEraWelcomeHero />
       <AdmissionRequiredDocumentsSection

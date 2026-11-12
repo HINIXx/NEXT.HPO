@@ -3,8 +3,12 @@ plans/
 
 # dependencies
 /node_modules
+/robot-companion/node_modules
 /.pnp
 .pnp.*
+
+# pnpm store cục bộ (cache, không lên git)
+/.pnpm-store
 
 # testing
 /coverage

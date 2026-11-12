@@ -147,6 +147,10 @@ for (const [mode, total, clock] of [
   });
 
 test("Thi thử: hết giờ tự nộp bài", async ({ page }) => {
+  // Tua đồng hồ giả 20 phút sẽ chạy hết vòng lặp khung hình của robot 3D → thay bundle robot bằng script rỗng.
+  await page.route("**/robot/dist/companion.js*", (route) =>
+    route.fulfill({ contentType: "text/javascript", body: "" }),
+  );
   await page.clock.install();
   await page.goto("/on-tap/");
   await page.getByRole("button", { name: /hạng B.*Vào thi thử/ }).click();
